@@ -54,6 +54,9 @@ class StructureVisualizer:
             for unit in sugar_units:
                 all_sugar_unit_atoms.update(unit['position_map'].keys())
                 
+            # 3. 收集核苷原子 (Collect actual nucleoside atoms: Ribose + Base)
+            nucleoside_atoms = sugar_utils.find_nucleotides(mol)
+                
             # 4. Classification (Delegated to sugar_utils)
             classification = sugar_utils.classify_sugar_parts(mol)
             sugar_ring_atoms = classification['sugar_ring_atoms']
@@ -62,32 +65,39 @@ class StructureVisualizer:
             all_sugar_framework_atoms = classification.get('all_sugar_framework_atoms', set()) # C6 etc.
 
             # 5. 准备着色方案 (Prepare Coloring Scheme)
-            # 糖环 (Sugar Ring): 红色 (Red) (1.0, 0.6, 0.6)
+            # 糖环 (Sugar Ring): 红色 (Red) (1.0, 0.5, 0.5)
             # 糖基团/连接 (Substituents/Linkages): 黄色 (Yellow) (1.0, 1.0, 0.4)
-            # 苷元 (Aglycone): 蓝色 (Blue) (0.6, 0.8, 1.0)
+            # 氨基酸 (Amino Acid): 绿色 (Green) (0.4, 0.9, 0.4)
+            # 苷元 (Aglycone): 蓝色 (Blue) (0.5, 0.8, 1.0)
             
             highlight_atoms = list(range(mol.GetNumAtoms()))
             highlight_atom_colors: Dict[int, tuple] = {}
             
+            # 5. 特殊片段识别 (Special Fragment Identification)
+            # Amino Acids & Peptides (Now securely pulled from sugar_utils)
+            amino_acid_atoms = set()
+            try:
+                peptide_info = sugar_utils.extract_amino_acids_and_peptides(mol)
+                for p in peptide_info:
+                    amino_acid_atoms.update(p['atoms'])
+            except Exception:
+                pass
+            
             for idx in range(mol.GetNumAtoms()):
-                if idx in sugar_ring_atoms:
-                    highlight_atom_colors[idx] = (1.0, 0.5, 0.5) # Red
+                if idx in nucleoside_atoms:
+                    highlight_atom_colors[idx] = (0.6, 1.0, 0.6) # Light Green for Nucleosides (Ribose + Base)
+                elif idx in sugar_ring_atoms:
+                    highlight_atom_colors[idx] = (1.0, 0.5, 0.5) # Red for all standard sugars
+                elif idx in all_sugar_framework_atoms and idx not in sugar_ring_atoms:
+                    highlight_atom_colors[idx] = (1.0, 0.5, 0.5) # Red for exocyclic generic framework
+                elif idx in amino_acid_atoms:
+                    highlight_atom_colors[idx] = (0.0, 0.6, 0.0) # Dark Green for Amino Acids
                 elif idx in sugar_substituent_atoms:
-                    highlight_atom_colors[idx] = (1.0, 1.0, 0.4) # Yellow
-                elif idx in all_sugar_framework_atoms:
-                     # Exocyclic carbons (C6) -> Yellow to distinguish from ring, or light red?
-                     # User wants "Sugar Ring" vs "Substituents".
-                     # C6 is part of the sugar framework. Let's make it Light Red/Pink or same as Ring?
-                     # Usually C6 is 'part of the sugar'.
-                     # Let's keep it consistent: Sugar Framework = Red.
-                     # But current request: Substituents = Yellow.
-                     # Let's make C6 Red (Sugar) unless it's modified.
-                     highlight_atom_colors[idx] = (1.0, 0.5, 0.5) # Red
+                    highlight_atom_colors[idx] = (1.0, 1.0, 0.4) # Yellow for other Small Molecule Linkers
                 elif idx in aglycone_atoms:
-                    highlight_atom_colors[idx] = (0.5, 0.8, 1.0) # Blue
+                    highlight_atom_colors[idx] = (0.5, 0.8, 1.0) # Blue for primary aglycone
                 else:
-                    # Fallback (e.g. ions, or unaccounted atoms) -> Blue (Aglycone-like)
-                    highlight_atom_colors[idx] = (0.5, 0.8, 1.0)
+                    highlight_atom_colors[idx] = (0.5, 0.8, 1.0) # Fallback to Blue
 
             # 6. 绘制图像 (Draw Image)
             d2d = rdMolDraw2D.MolDraw2DCairo(800, 600) # Increased resolution

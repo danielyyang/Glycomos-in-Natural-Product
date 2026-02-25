@@ -1,0 +1,288 @@
+from rdkit import Chem
+
+# ---------- 1. Find sugar rings (furanose & pyranose) ----------
+
+def find_sugar_rings(mol):
+    """
+    Returns a list of sugar-like rings.
+    Here: 5- or 6-membered ring with exactly 1 oxygen (furanose or pyranose).
+    """
+    ri = mol.GetRingInfo()
+    sugar_rings = []
+    for ring in ri.AtomRings():
+        atoms = [mol.GetAtomWithIdx(i) for i in ring]
+        symbols = [a.GetSymbol() for a in atoms]
+        # Accept 5- or 6-member rings with exactly one O
+        if len(ring) in (5, 6) and symbols.count("O") == 1:
+            sugar_rings.append(list(ring))
+    return sugar_rings
+
+
+# ---------- 2. Number a sugar ring (C1–C5/6 depending on size) ----------
+
+def number_sugar_ring(mol, ring_atoms):
+    """
+    Given a sugar-like ring (5 or 6 members, 1 O),
+    returns:
+      - position_map: {atom_idx: position (1..5 or 1..6)}
+      - ring_oxygen_idx
+
+    Conventions:
+      - The ring is O–C1–C2–... (or the inverse order).
+      - C1 is the neighbor of the ring oxygen that has an exocyclic oxygen.
+      - For a 6-membered ring: ring carbons are C1–C5, exocyclic CH2 is C6.
+      - For a 5-membered ring: ring carbons are C1–C4, exocyclic CH2 is C5.
+    """
+    ring_atoms = list(ring_atoms)
+    ring_size = len(ring_atoms)
+    atom_objs = {i: mol.GetAtomWithIdx(i) for i in ring_atoms}
+
+    # sanity check: we only handle 5- or 6-member rings here
+    if ring_size not in (5, 6):
+        return None, None
+
+    # find the ring oxygen
+    ring_oxygen_idx = None
+    for idx in ring_atoms:
+        if atom_objs[idx].GetSymbol() == "O":
+            ring_oxygen_idx = idx
+            break
+    if ring_oxygen_idx is None:
+        return None, None  # not a sugar ring
+
+    # rotate list so it starts at the ring oxygen
+    pos_O = ring_atoms.index(ring_oxygen_idx)
+    ring_order = ring_atoms[pos_O:] + ring_atoms[:pos_O]
+    # now ring_order[0] = ring oxygen;
+    # neighbors in the ring: ring_order[1] and ring_order[-1]
+    neighbor1 = ring_order[1]
+    neighbor2 = ring_order[-1]
+
+    def has_exocyclic_oxygen(atom_idx):
+        atom = mol.GetAtomWithIdx(atom_idx)
+        for n in atom.GetNeighbors():
+            if n.GetIdx() == ring_oxygen_idx:
+                continue
+            if n.GetIdx() in ring_order:
+                continue
+            if n.GetSymbol() == "O":
+                return True
+        return False
+
+    # choose C1: neighbor of O that has an exocyclic oxygen
+    c1_candidate = None
+    if has_exocyclic_oxygen(neighbor1):
+        c1_candidate = neighbor1
+    if c1_candidate is None and has_exocyclic_oxygen(neighbor2):
+        c1_candidate = neighbor2
+
+    # coarse fallback: if none found, assume neighbor1 is C1
+    if c1_candidate is None:
+        c1_candidate = neighbor1
+
+    # list of ring carbons in order
+    # ring_order = [O, C?, C?, C?, ...]
+    carbons_in_ring = ring_order[1:]  # all atoms except the ring O
+
+    # orient the ring so that carbons_path = [C1, C2, ...]
+    if c1_candidate == neighbor1:
+        carbons_path = carbons_in_ring[:]  # already in the correct direction
+    else:
+        carbons_path = list(reversed(carbons_in_ring))
+
+    # map ring carbon positions:
+    # for 6-member ring: C1..C5 (5 carbons in ring)
+    # for 5-member ring: C1..C4 (4 carbons in ring)
+    position_map = {}
+    for i, idx in enumerate(carbons_path):
+        # there will be ring_size-1 carbons:
+        #  - if ring_size=6: 5 carbons -> positions 1..5
+        #  - if ring_size=5: 4 carbons -> positions 1..4
+        position_map[idx] = i + 1
+
+    # Find the "terminal" ring carbon (last in the path) to search for an exocyclic CH2 group
+    c_last_idx = carbons_path[-1]
+    c_last_atom = mol.GetAtomWithIdx(c_last_idx)
+    exocyclic_idx = None
+    for n in c_last_atom.GetNeighbors():
+        if n.GetIdx() in ring_order:
+            continue
+        if n.GetSymbol() == "C":
+            if n.GetHybridization() == Chem.HybridizationType.SP3:
+                exocyclic_idx = n.GetIdx()
+                break
+
+    # If we find an exocyclic carbon, assign it the next position:
+    #  - for ring_size=6 (pyranose): position 6
+    #  - for ring_size=5 (furanose): position 5
+    if exocyclic_idx is not None:
+        next_pos = len(carbons_path) + 1
+        position_map[exocyclic_idx] = next_pos
+
+    return position_map, ring_oxygen_idx
+
+
+# ---------- 3. Build sugar units ----------
+
+def get_sugar_units(mol):
+    """
+    Steps:
+      - detect sugar-like rings (5- or 6-member)
+      - number each one (C1..C5/6)
+    Returns a list of dicts:
+      {
+        'id': int,
+        'ring_atoms': [...],
+        'ring_oxygen': int,
+        'position_map': {atom_idx: position}
+      }
+    And also a mapping atom_idx -> sugar_id.
+    """
+    sugar_rings = find_sugar_rings(mol)
+    sugar_units = []
+    atom_to_sugar = {}
+
+    for sid, ring in enumerate(sugar_rings):
+        pos_map, ring_O = number_sugar_ring(mol, ring)
+        if pos_map is None:
+            continue
+        sugar_units.append({
+            'id': sid,
+            'ring_atoms': list(ring),
+            'ring_oxygen': ring_O,
+            'position_map': pos_map
+        })
+        for a_idx in pos_map.keys():
+            atom_to_sugar[a_idx] = sid
+
+    return sugar_units, atom_to_sugar
+
+
+# ---------- 4. Find glycosidic oxygens (sugar–sugar bridge) ----------
+
+def is_bridge_oxygen_between_sugars(mol, atom, atom_to_sugar):
+    """
+    Check if:
+      - atom is O
+      - it is not in a ring
+      - it has 2 neighbors (C–C) with single bonds
+      - and both C neighbors belong to sugars (atom_to_sugar)
+    """
+    if atom.GetSymbol() != "O":
+        return False
+    if atom.IsInRing():
+        return False
+
+    bonds = list(atom.GetBonds())
+    if len(bonds) != 2:
+        return False
+
+    neighbors = []
+    for b in bonds:
+        if b.GetBondType() != Chem.BondType.SINGLE:
+            return False
+        other = b.GetOtherAtom(atom)
+        if other.GetSymbol() != "C":
+            return False
+        neighbors.append(other)
+
+    # must be attached to TWO sugar carbons
+    sugar_ids = []
+    for n in neighbors:
+        sid = atom_to_sugar.get(n.GetIdx(), None)
+        sugar_ids.append(sid)
+
+    if sugar_ids[0] is None or sugar_ids[1] is None:
+        return False
+
+    # if both are sugars, treat as a bridge
+    return True
+
+
+def find_glycosidic_linkages(mol, sugar_units, atom_to_sugar):
+    """
+    Returns a list of glycosidic linkages between sugar units:
+      [
+        {
+          'sugar_donor': id,
+          'sugar_acceptor': id,
+          'pos_donor': 1,
+          'pos_acceptor': 6,
+          'linkage': '1-6'
+        },
+        ...
+      ]
+    Convention: 'donor' is the sugar where the bond originates from C1.
+    """
+    linkages = []
+    for atom in mol.GetAtoms():
+        if not is_bridge_oxygen_between_sugars(mol, atom, atom_to_sugar):
+            continue
+
+        # carbon neighbors of the bridge oxygen
+        neighbors = [b.GetOtherAtom(atom) for b in atom.GetBonds()]
+        c1, c2 = neighbors[0], neighbors[1]
+        idx1, idx2 = c1.GetIdx(), c2.GetIdx()
+
+        s1 = atom_to_sugar[idx1]
+        s2 = atom_to_sugar[idx2]
+        # get position maps for the two sugars
+        su1 = next(su for su in sugar_units if su['id'] == s1)
+        su2 = next(su for su in sugar_units if su['id'] == s2)
+
+        pos1 = su1['position_map'].get(idx1, None)
+        pos2 = su2['position_map'].get(idx2, None)
+
+        if pos1 is None or pos2 is None:
+            # could be a bridge at a non-numbered position (e.g. weird substituent), ignore
+            continue
+
+        # decide who is "donor" (who has C1)
+        if pos1 == 1 and pos2 != 1:
+            sugar_donor, sugar_acceptor = s1, s2
+            pos_donor, pos_acceptor = pos1, pos2
+        elif pos2 == 1 and pos1 != 1:
+            sugar_donor, sugar_acceptor = s2, s1
+            pos_donor, pos_acceptor = pos2, pos1
+        else:
+            # if neither side is C1 (or both are 1, e.g. 1–1), just record symmetrically
+            sugar_donor, sugar_acceptor = s1, s2
+            pos_donor, pos_acceptor = pos1, pos2
+
+        linkage_str = f"{pos_donor}-{pos_acceptor}"
+
+        linkages.append({
+            'sugar_donor': sugar_donor,
+            'sugar_acceptor': sugar_acceptor,
+            #'pos_donor': pos_donor,
+            #'pos_acceptor': pos_acceptor,
+            'linkage': linkage_str,
+            #'bridge_oxygen_idx': atom.GetIdx()
+        })
+
+    return linkages
+
+
+# ---------- 5. Main function from SMILES ----------
+
+def get_sugar_linkages_from_smiles(smiles):
+    mol = Chem.MolFromSmiles(smiles)
+    if mol is None:
+        raise ValueError("Invalid SMILES")
+
+    sugar_units, atom_to_sugar = get_sugar_units(mol)
+    linkages = find_glycosidic_linkages(mol, sugar_units, atom_to_sugar)
+    return sugar_units, linkages
+
+
+smiles = "CO[C@@H]1O[C@H](CO[C@@H]2O[C@H](COC(=O)OCC3c4ccccc4-c4ccccc43)[C@@H](OCc3ccccc3)[C@H](OCc3ccccc3)[C@H]2OC(=O)c2ccccc2)[C@@H](OCc2ccccc2)[C@H](OCc2ccccc2)[C@H]1OC(=O)c1ccccc1"
+
+sugars, linkages = get_sugar_linkages_from_smiles(smiles)
+
+print("Sugars found:")
+for su in sugars:
+    print(su['id'], su['position_map'])
+
+print("\nGlycosidic linkages:")
+for l in linkages:
+    print(l)

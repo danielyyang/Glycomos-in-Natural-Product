@@ -1,0 +1,1445 @@
+CNP0232870.1 | 多肽:Glu-Xaa | ENTIRE_MOL
+CNP0584239.1 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0127140.1 | 氨基酸修饰:Trp | ENTIRE_MOL
+CNP0574982.0 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0377647.2 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0550772.2 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0594395.1 | 氨基酸修饰:Gln | ENTIRE_MOL
+CNP0074299.1 | 多肽:Gln-Xaa | ENTIRE_MOL
+CNP0032787.0 | 氨基酸修饰:Lys; 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0513974.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0435034.1 | 氨基酸修饰:Arg; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0107646.2 | 多肽:Tyr-Xaa; 多肽:Gln-Xaa; 氨基酸修饰:Gln; 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0319201.2 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0320098.2 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0032693.0 | 氨基酸修饰:Lys; 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0125555.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0107646.3 | 多肽:Tyr-Xaa; 多肽:Gln-Xaa; 氨基酸修饰:Gln; 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0477799.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0540128.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0450738.1 | 氨基酸修饰:Gln | ENTIRE_MOL
+CNP0293198.2 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0047645.3 | 氨基酸修饰:Phe; 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0432893.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0491024.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0595158.2 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0424893.1 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0079267.1 | 多肽:Pro-Xaa-Xaa; 多肽:Pro-Xaa; 多肽:Pro-Xaa; 多肽:Pro-Xaa; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0316698.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0233255.1 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0590361.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0336042.2 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0252555.2 | 氨基酸修饰:Thr; 氨基酸修饰:Val; 氨基酸修饰:Val; 氨基酸修饰:Val; 氨基酸修饰:Ala; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0230512.3 | 氨基酸修饰:Val; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0338780.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0491628.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0571497.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0484686.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0182047.5 | 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0596656.0 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0491217.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0466684.0 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0229769.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0160182.7 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0513974.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0194140.2 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0568593.3 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0561509.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0444181.1 | 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0299858.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0229769.3 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0503885.4 | 氨基酸修饰:Arg | ENTIRE_MOL
+CNP0082701.1 | 氨基酸修饰:Phe; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0436602.1 | 氨基酸修饰:Arg; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0580743.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0287208.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0038101.2 | 氨基酸修饰:Lys; 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0160182.8 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0528296.0 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0136938.1 | 氨基酸修饰:Tyr; 氨基酸修饰:Gln; 氨基酸修饰:Gln; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0270282.3 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0576916.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0163174.1 | 氨基酸修饰:Tyr | ENTIRE_MOL
+CNP0577970.1 | 氨基酸修饰:Cys; 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0604322.1 | 氨基酸修饰:Phe; 多肽:Phe-Xaa; 氨基酸修饰:His; 氨基酸修饰:Asn; 氨基酸修饰:Ser; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0593952.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0335815.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0604501.1 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0526390.3 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0411425.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0456816.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0476243.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0554183.1 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0320623.2 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0475337.1 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0429844.2 | 氨基酸修饰:Lys; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0229892.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0227427.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0424803.2 | 氨基酸修饰:Lys; 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0140466.1 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0562610.2 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0562610.4 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0135511.1 | 氨基酸修饰:Phe; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0441477.1 | 氨基酸修饰:Tyr | ENTIRE_MOL
+CNP0176101.5 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0214242.1 | 氨基酸修饰:Tyr | ENTIRE_MOL
+CNP0580056.3 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0469649.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0359041.1 | 氨基酸修饰:Glu; 氨基酸修饰:Glu; 氨基酸修饰:Glu | ENTIRE_MOL
+CNP0223000.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0572689.1 | 氨基酸修饰:Phe; 多肽:Asn-Xaa; 氨基酸修饰:Val; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0386484.1 | 氨基酸修饰:Val; 氨基酸修饰:Val; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0283859.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0584803.0 | 氨基酸修饰:Glu | ENTIRE_MOL
+CNP0217418.2 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0611706.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0457983.1 | 氨基酸修饰:Tyr | ENTIRE_MOL
+CNP0492806.1 | 氨基酸修饰:Phe; 多肽:Asn-Xaa; 氨基酸修饰:Val; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0515588.1 | 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0585546.0 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0227440.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0074329.1 | 氨基酸修饰:Met; 氨基酸修饰:Cys; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0290056.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0176101.1 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0525352.1 | 氨基酸修饰:Arg; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0611407.0 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0578335.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0054921.1 | 氨基酸修饰:Tyr; 氨基酸修饰:Gln; 氨基酸修饰:Ser; 氨基酸修饰:Ala; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0074316.1 | 氨基酸修饰:Thr; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0309876.2 | 多肽:Tyr-Xaa; 多肽:Asn-Xaa; 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0349035.6 | 氨基酸修饰:Gln | ENTIRE_MOL
+CNP0534412.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0450970.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0579140.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0336042.3 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0292432.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0508695.1 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0443082.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0162633.0 | 氨基酸修饰:Tyr; 氨基酸修饰:Lys; 多肽:Glu-Xaa; 氨基酸修饰:Asn; 氨基酸修饰:Pro; 氨基酸修饰:Thr; 氨基酸修饰:Leu; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0353127.0 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0309876.1 | 多肽:Tyr-Xaa; 多肽:Asn-Xaa; 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0449907.1 | 多肽:Tyr-Xaa; 多肽:Tyr-Xaa; 氨基酸修饰:Gln; 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0083476.1 | 氨基酸修饰:Asn | ENTIRE_MOL
+CNP0528309.0 | 氨基酸修饰:Asn | ENTIRE_MOL
+CNP0456172.0 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0119944.0 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0299795.2 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0229769.4 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0544274.3 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0468932.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0329042.1 | 氨基酸修饰:Tyr; 多肽:Gln-Xaa; 氨基酸修饰:Ser; 氨基酸修饰:Ala; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0506794.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0581530.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0590965.1 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0584387.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0553239.0 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0040502.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0586681.0 | 氨基酸修饰:Glu; 氨基酸修饰:Ser; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0155079.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0139089.1 | 氨基酸修饰:Tyr; 氨基酸修饰:Thr; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0297137.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0457622.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0341013.2 | 氨基酸修饰:Phe; 氨基酸修饰:Asn; 氨基酸修饰:Thr; 多肽:Thr-Xaa; 多肽:Leu-Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0378142.2 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0497216.1 | 氨基酸修饰:Thr; 多肽:Thr-Xaa; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0587774.0 | 氨基酸修饰:Lys; 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0342143.2 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0067408.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0343900.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0515748.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0440527.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0044221.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0606207.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0228886.5 | 多肽:Trp-Xaa | ENTIRE_MOL
+CNP0590650.2 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0515306.0 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0532526.1 | 氨基酸修饰:Lys; 氨基酸修饰:Ser; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0456459.1 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0480990.0 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0121048.0 | 氨基酸修饰:Arg; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0547792.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0573143.1 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0504416.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0439517.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0060924.4 | 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0500913.1 | 氨基酸修饰:Gln; 多肽:Thr-Xaa | ENTIRE_MOL
+CNP0565300.1 | 多肽:Tyr-Xaa; 多肽:Tyr-Xaa-Xaa | ENTIRE_MOL
+CNP0239808.2 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0491846.0 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0509985.0 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0452511.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0492872.0 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0268819.3 | 氨基酸修饰:Gln | ENTIRE_MOL
+CNP0323903.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0393202.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0244862.3 | 氨基酸修饰:Phe; 氨基酸修饰:Asn; 氨基酸修饰:Thr; 多肽:Thr-Xaa; 多肽:Leu-Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0459327.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0492018.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0210174.2 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0349035.2 | 氨基酸修饰:Gln | ENTIRE_MOL
+CNP0587531.1 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0540128.3 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0188915.2 | 多肽:Val-Xaa | ENTIRE_MOL
+CNP0594562.2 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0064420.0 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0183742.3 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0214242.3 | 氨基酸修饰:Tyr | ENTIRE_MOL
+CNP0085550.1 | 氨基酸修饰:Met | ENTIRE_MOL
+CNP0524880.2 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0299795.1 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0333548.2 | 多肽:Asp-Xaa | ENTIRE_MOL
+CNP0578161.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0498274.1 | 多肽:Tyr-Xaa-Xaa; 多肽:Tyr-Xaa | ENTIRE_MOL
+CNP0252747.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0349063.3 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0166357.1 | 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0524461.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0352758.1 | 多肽:Trp-Xaa | ENTIRE_MOL
+CNP0452707.1 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0239808.1 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0533846.1 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0582804.2 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0535468.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0455736.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0231536.2 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0235105.1 | 多肽:Phe-Xaa; 氨基酸修饰:Asn; 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0268819.2 | 氨基酸修饰:Gln | ENTIRE_MOL
+CNP0352941.1 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0259568.1 | 氨基酸修饰:Ala; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0521337.1 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0083749.1 | 氨基酸修饰:Tyr; 多肽:Gln-Xaa; 氨基酸修饰:Ser; 氨基酸修饰:Ala; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0438492.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0085920.0 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0378097.1 | 氨基酸修饰:Met | ENTIRE_MOL
+CNP0047645.2 | 氨基酸修饰:Phe; 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0222678.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0176101.4 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0080884.0 | 氨基酸修饰:Gly; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0242258.1 | 氨基酸修饰:Phe; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0044221.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0590650.3 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0446391.1 | 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0182646.1 | 氨基酸修饰:Tyr; 多肽:His-Ala-Xaa; 氨基酸修饰:Gln | ENTIRE_MOL
+CNP0157778.2 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0339005.1 | 氨基酸修饰:Phe; 氨基酸修饰:Asn; 氨基酸修饰:Thr; 多肽:Thr-Xaa; 多肽:Leu-Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0491213.0 | 氨基酸修饰:Asn | ENTIRE_MOL
+CNP0527559.1 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0332753.1 | 氨基酸修饰:Tyr | ENTIRE_MOL
+CNP0178115.1 | 氨基酸修饰:Tyr; 氨基酸修饰:Thr; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0270232.1 | 氨基酸修饰:Ala; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0105395.4 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0532524.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0308037.2 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0136295.2 | 氨基酸修饰:Cys; 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0424803.1 | 氨基酸修饰:Lys; 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0477788.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0144526.1 | 氨基酸修饰:Phe; 氨基酸修饰:Phe; 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0601704.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0338780.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0352398.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0548707.2 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0431761.3 | 氨基酸修饰:Tyr; 氨基酸修饰:Gln; 多肽:Gln-Xaa; 多肽:Thr-Xaa | ENTIRE_MOL
+CNP0352860.2 | 多肽:Tyr-Xaa; 多肽:Asn-Xaa; 氨基酸修饰:Asn | ENTIRE_MOL
+CNP0611003.0 | 氨基酸修饰:Asp | ENTIRE_MOL
+CNP0484504.1 | 多肽:Asp-Xaa | ENTIRE_MOL
+CNP0316952.4 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0602721.1 | 氨基酸修饰:Tyr; 多肽:Arg-Xaa; 氨基酸修饰:Arg; 氨基酸修饰:Lys; 多肽:Asn-Xaa; 氨基酸修饰:Asn; 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0002688.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0563892.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0523193.1 | 氨基酸修饰:Tyr | ENTIRE_MOL
+CNP0331172.4 | 氨基酸修饰:Cys; 氨基酸修饰:Cys; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0599320.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0611715.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0299486.1 | 氨基酸修饰:Arg | ENTIRE_MOL
+CNP0228886.3 | 多肽:Trp-Xaa | ENTIRE_MOL
+CNP0577858.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0287208.2 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0484169.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0559403.2 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0568964.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0574801.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0176101.6 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0484169.2 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0430549.1 | 氨基酸修饰:Arg; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0559403.1 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0143559.5 | 氨基酸修饰:Cys; 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0160182.4 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0071946.3 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0581460.1 | 多肽:Tyr-Xaa; 多肽:Tyr-Xaa-Xaa | ENTIRE_MOL
+CNP0105332.1 | 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0510930.0 | 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0556652.1 | 氨基酸修饰:Arg; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0276237.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0544274.1 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0316777.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0454526.1 | 氨基酸修饰:Lys; 氨基酸修饰:Ala; 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0574735.0 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0153830.2 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0276818.1 | 氨基酸修饰:Val; 氨基酸修饰:Val; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0592203.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0113235.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0074747.1 | 多肽:Glu-Xaa | ENTIRE_MOL
+CNP0333548.3 | 多肽:Asp-Xaa | ENTIRE_MOL
+CNP0122588.2 | 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0605236.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0555017.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0601704.5 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0522976.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0428868.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0483831.1 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0201634.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0186381.0 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0483943.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0602919.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0606393.1 | 多肽:Tyr-Xaa; 多肽:Tyr-Xaa | ENTIRE_MOL
+CNP0157778.1 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0600463.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0470467.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0292432.2 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0248472.1 | 氨基酸修饰:His; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0345359.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0082897.1 | 氨基酸修饰:Lys | ENTIRE_MOL
+CNP0464109.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0142084.1 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0124526.0 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0157202.1 | 氨基酸修饰:Lys; 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0255120.0 | 氨基酸修饰:His | ENTIRE_MOL
+CNP0472311.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0245457.1 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0489823.1 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0340500.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0145926.0 | 氨基酸修饰:Gln | ENTIRE_MOL
+CNP0227440.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0216703.2 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0503885.2 | 氨基酸修饰:Arg | ENTIRE_MOL
+CNP0568593.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0470090.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0468777.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0432387.1 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0611406.0 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0530377.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0426010.1 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0570809.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0118252.3 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0245902.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0348412.5 | 氨基酸修饰:Val; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0377647.5 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0022105.2 | 氨基酸修饰:Lys; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0558279.1 | 氨基酸修饰:Phe; 多肽:Phe-Xaa; 氨基酸修饰:His; 氨基酸修饰:Asn; 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0595383.0 | 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0352184.1 | 多肽:Tyr-Xaa; 多肽:Gln-Xaa; 氨基酸修饰:Gln; 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0206446.2 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0082700.1 | 氨基酸修饰:Phe; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0076967.0 | 氨基酸修饰:Lys; 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0521463.0 | 氨基酸修饰:Ser; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0079267.3 | 多肽:Pro-Xaa-Xaa; 多肽:Pro-Xaa; 多肽:Pro-Xaa; 多肽:Pro-Xaa; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0519723.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0382005.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0141926.1 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0348412.4 | 氨基酸修饰:Val; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0562610.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0171520.2 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0288003.1 | 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0482104.1 | 氨基酸修饰:Phe; 多肽:Phe-Xaa; 氨基酸修饰:His; 氨基酸修饰:Asn; 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0574655.1 | 氨基酸修饰:Arg; 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0228260.1 | 氨基酸修饰:Tyr; 多肽:His-Ala-Xaa; 氨基酸修饰:Gln | ENTIRE_MOL
+CNP0610102.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0107646.1 | 多肽:Tyr-Xaa; 多肽:Gln-Xaa; 氨基酸修饰:Gln; 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0594246.0 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0460208.1 | 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0580760.1 | 氨基酸修饰:Phe; 多肽:Phe-Xaa; 氨基酸修饰:His; 氨基酸修饰:Asn; 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0179499.1 | 氨基酸修饰:Phe; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0438540.1 | 多肽:Tyr-Xaa; 多肽:Tyr-Xaa; 氨基酸修饰:Gln; 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0252747.2 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0177814.0 | 氨基酸修饰:Lys; 氨基酸修饰:Ala; 氨基酸修饰:Ala; 氨基酸修饰:Gly; 多肽:Gly-Xaa | ENTIRE_MOL
+CNP0557927.1 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0157237.2 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0210174.3 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0369730.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0298787.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0085030.1 | 多肽:Glu-Xaa | ENTIRE_MOL
+CNP0308776.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0234241.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0610223.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0610417.1 | 氨基酸修饰:Tyr; 氨基酸修饰:Arg; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0598602.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0492717.1 | 多肽:Tyr-Xaa; 多肽:Asn-Xaa; 氨基酸修饰:Asn | ENTIRE_MOL
+CNP0171520.3 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0448440.1 | 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0442138.1 | 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0028081.1 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0310863.0 | 氨基酸修饰:Arg; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0037396.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0444883.0 | 氨基酸修饰:Lys; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0599831.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0514532.3 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0378097.6 | 氨基酸修饰:Met | ENTIRE_MOL
+CNP0231536.1 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0612107.1 | 氨基酸修饰:Arg; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0600148.2 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0491059.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0224914.0 | 氨基酸修饰:Arg; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0033078.0 | 氨基酸修饰:Lys; 氨基酸修饰:Ala; 氨基酸修饰:Ala; 氨基酸修饰:Gly; 多肽:Gly-Xaa | ENTIRE_MOL
+CNP0272699.0 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0158760.1 | 氨基酸修饰:Glu; 氨基酸修饰:Glu; 氨基酸修饰:Glu | ENTIRE_MOL
+CNP0525319.1 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0540779.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0529542.0 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0489092.0 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0206883.1 | 氨基酸修饰:Val; 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0270282.1 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0559986.1 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0171520.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0471418.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0446983.0 | 氨基酸修饰:Lys; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0038410.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0505431.1 | 多肽:Tyr-Xaa; 多肽:Tyr-Xaa-Xaa | ENTIRE_MOL
+CNP0091042.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0552448.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0434055.2 | 氨基酸修饰:Thr; 氨基酸修饰:Val; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0501729.1 | 氨基酸修饰:Thr; 多肽:Thr-Xaa; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0576306.1 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0380704.1 | 氨基酸修饰:Trp | ENTIRE_MOL
+CNP0044325.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0117229.1 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0105395.5 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0506753.1 | 多肽:Arg-Xaa; 氨基酸修饰:Arg; 氨基酸修饰:His; 氨基酸修饰:Lys; 多肽:Asn-Xaa; 氨基酸修饰:Asn; 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0452790.1 | 氨基酸修饰:Tyr | ENTIRE_MOL
+CNP0105395.1 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0585303.0 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0399589.0 | 氨基酸修饰:His | ENTIRE_MOL
+CNP0523336.1 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0591480.1 | 氨基酸修饰:Ala; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0429149.1 | 多肽:Tyr-Xaa; 多肽:Tyr-Xaa; 氨基酸修饰:Gln; 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0550066.1 | 氨基酸修饰:Arg; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0513119.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0229769.2 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0194140.3 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0225271.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0369730.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0136295.1 | 氨基酸修饰:Cys; 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0549363.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0531445.1 | 氨基酸修饰:Phe; 多肽:Asn-Xaa; 氨基酸修饰:Val; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0271454.1 | 氨基酸修饰:Gln | ENTIRE_MOL
+CNP0189267.2 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0399122.0 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0586106.0 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0513083.1 | 氨基酸修饰:Met | ENTIRE_MOL
+CNP0331172.1 | 氨基酸修饰:Cys; 氨基酸修饰:Cys; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0211570.2 | 氨基酸修饰:Thr; 氨基酸修饰:Val; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0228778.1 | 氨基酸修饰:Lys; 多肽:Ala-Xaa | ENTIRE_MOL
+CNP0568537.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0308037.7 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0266798.0 | 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0157237.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0462352.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0281176.1 | 氨基酸修饰:Trp; 氨基酸修饰:Lys; 氨基酸修饰:Asn; 氨基酸修饰:Asn | ENTIRE_MOL
+CNP0490165.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0308037.10 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0513961.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0266126.5 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0175066.1 | 氨基酸修饰:Tyr | ENTIRE_MOL
+CNP0503885.7 | 氨基酸修饰:Arg | ENTIRE_MOL
+CNP0573180.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0610177.1 | 氨基酸修饰:Tyr; 多肽:His-Ala-Xaa; 氨基酸修饰:Gln | ENTIRE_MOL
+CNP0378097.5 | 氨基酸修饰:Met | ENTIRE_MOL
+CNP0268646.1 | 氨基酸修饰:Cys; 氨基酸修饰:Cys; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0266126.4 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0352184.2 | 多肽:Tyr-Xaa; 多肽:Gln-Xaa; 氨基酸修饰:Gln; 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0494007.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0528862.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0206446.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0175394.3 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0555017.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0164295.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0160182.12 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0165360.0 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0491217.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0573180.3 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0568964.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0571843.1 | 氨基酸修饰:Tyr | ENTIRE_MOL
+CNP0574801.2 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0573167.2 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0347746.1 | 氨基酸修饰:Tyr | ENTIRE_MOL
+CNP0516116.1 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0499962.3 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0339232.2 | 多肽:Tyr-Xaa; 多肽:Asn-Xaa; 氨基酸修饰:Asn | ENTIRE_MOL
+CNP0516401.1 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0514048.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0585522.1 | 氨基酸修饰:Lys; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0211186.1 | 氨基酸修饰:Leu; 氨基酸修饰:Leu; 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0520243.0 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0322416.1 | 氨基酸修饰:Val; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0277673.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0220274.1 | 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0268646.3 | 氨基酸修饰:Cys; 氨基酸修饰:Cys; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0451728.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0516984.1 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0522826.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0570809.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0468331.1 | 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0429872.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0144357.2 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0504424.0 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0343900.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0557140.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0153830.5 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0446201.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0458310.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0588300.1 | 多肽:Thr-Xaa; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0349063.2 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0598745.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0336948.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0083749.2 | 氨基酸修饰:Tyr; 多肽:Gln-Xaa; 氨基酸修饰:Ser; 氨基酸修饰:Ala; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0560295.1 | 氨基酸修饰:Phe; 多肽:Asn-Xaa; 氨基酸修饰:Val; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0455871.1 | 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0286883.2 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0054739.4 | 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0252555.1 | 氨基酸修饰:Thr; 氨基酸修饰:Val; 氨基酸修饰:Val; 氨基酸修饰:Val; 氨基酸修饰:Ala; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0475417.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0499292.1 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0495456.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0520465.1 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0595158.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0299795.4 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0526132.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0580399.0 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0188428.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0336525.1 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0476415.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0480921.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0506080.1 | 氨基酸修饰:Phe; 多肽:Asn-Xaa; 氨基酸修饰:Val; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0141659.2 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0451578.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0543263.2 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0529721.1 | 氨基酸修饰:Phe; 氨基酸修饰:Asn; 氨基酸修饰:Thr; 多肽:Thr-Xaa; 多肽:Val-Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0590187.1 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0228886.1 | 多肽:Trp-Xaa | ENTIRE_MOL
+CNP0534412.2 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0183742.6 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0578097.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0480282.2 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0322822.1 | 多肽:Tyr-Xaa; 多肽:Asn-Xaa; 氨基酸修饰:Asn | ENTIRE_MOL
+CNP0593952.3 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0156960.2 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0555947.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0581162.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0253016.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0516337.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0581842.1 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0496230.1 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0299858.3 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0363313.1 | 氨基酸修饰:Pro; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0443366.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0566731.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0180022.0 | 氨基酸修饰:Gln; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0059006.1 | 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0458702.1 | 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0411213.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0512735.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0526390.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0270277.1 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0143559.2 | 氨基酸修饰:Cys; 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0118252.4 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0611408.0 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0252747.3 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0202621.3 | 氨基酸修饰:Lys; 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0175394.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0443561.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0143559.1 | 氨基酸修饰:Cys; 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0483230.1 | 氨基酸修饰:Val; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0523494.1 | 氨基酸修饰:Phe; 多肽:Phe-Xaa; 氨基酸修饰:His; 氨基酸修饰:Asn; 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0555554.0 | 氨基酸修饰:Glu | ENTIRE_MOL
+CNP0543587.1 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0573167.3 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0352863.2 | 多肽:Tyr-Xaa; 多肽:Asn-Xaa; 氨基酸修饰:Asn | ENTIRE_MOL
+CNP0511375.1 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0205464.1 | 氨基酸修饰:Lys | ENTIRE_MOL
+CNP0481244.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0332595.1 | 氨基酸修饰:Phe; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0504618.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0463193.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0194140.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0564105.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0475119.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0609397.1 | 氨基酸修饰:Phe; 多肽:Phe-Xaa; 氨基酸修饰:His; 氨基酸修饰:Asn; 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0611141.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0393087.2 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0485373.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0532522.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0353342.1 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0168341.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0516496.1 | 氨基酸修饰:Asp; 氨基酸修饰:Asp; 氨基酸修饰:Asp | ENTIRE_MOL
+CNP0300923.2 | 氨基酸修饰:Tyr; 多肽:Gln-Xaa; 氨基酸修饰:Ser; 氨基酸修饰:Ala; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0341013.3 | 氨基酸修饰:Phe; 氨基酸修饰:Asn; 氨基酸修饰:Thr; 多肽:Thr-Xaa; 多肽:Leu-Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0524461.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0230512.4 | 氨基酸修饰:Val; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0087096.2 | 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0611470.1 | 氨基酸修饰:Gln | ENTIRE_MOL
+CNP0509066.1 | 多肽:Thr-Xaa; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0189675.2 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0431761.2 | 氨基酸修饰:Tyr; 氨基酸修饰:Gln; 多肽:Gln-Xaa; 多肽:Thr-Xaa | ENTIRE_MOL
+CNP0553673.1 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0540498.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0206783.1 | 多肽:Lys-Xaa; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0337477.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0600483.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0316952.3 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0534749.1 | 氨基酸修饰:Gln | ENTIRE_MOL
+CNP0525649.1 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0155236.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0276237.3 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0168341.2 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0452488.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0266693.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0425594.1 | 氨基酸修饰:Lys; 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0336191.1 | 氨基酸修饰:Tyr; 多肽:His-Xaa; 氨基酸修饰:Gln; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0435338.2 | 多肽:Tyr-Xaa; 多肽:Gln-Xaa; 氨基酸修饰:Gln; 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0481769.1 | 氨基酸修饰:Phe; 多肽:Asn-Xaa; 氨基酸修饰:Val; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0503579.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0129321.1 | 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0382005.4 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0486902.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0320061.2 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0437919.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0456783.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0453367.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0115892.1 | 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0160182.13 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0491059.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0336525.3 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0488624.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0073752.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0319201.1 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0429550.1 | 多肽:Tyr-Xaa; 多肽:Tyr-Xaa; 氨基酸修饰:Gln; 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0491167.1 | 多肽:Gln-Xaa | ENTIRE_MOL
+CNP0548714.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0392082.1 | 氨基酸修饰:Tyr | ENTIRE_MOL
+CNP0303307.0 | 氨基酸修饰:Arg; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0484504.2 | 多肽:Asp-Xaa | ENTIRE_MOL
+CNP0478079.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0244862.2 | 氨基酸修饰:Phe; 氨基酸修饰:Asn; 氨基酸修饰:Thr; 多肽:Thr-Xaa; 多肽:Leu-Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0488372.1 | 氨基酸修饰:Gln; 多肽:Thr-Xaa | ENTIRE_MOL
+CNP0279781.1 | 氨基酸修饰:Pro; 氨基酸修饰:Thr; 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0577565.1 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0491777.4 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0438895.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0431117.2 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0561951.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0571769.0 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0182047.6 | 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0286524.1 | 多肽:Glu-Xaa | ENTIRE_MOL
+CNP0325532.1 | 氨基酸修饰:Ala; 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0165416.1 | 氨基酸修饰:Pro; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0153830.6 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0352590.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0452447.1 | 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0211570.1 | 氨基酸修饰:Thr; 氨基酸修饰:Val; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0570041.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0550772.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0180474.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0587723.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0153830.4 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0499962.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0275916.0 | 氨基酸修饰:Arg | ENTIRE_MOL
+CNP0470042.0 | 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0287824.4 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0442369.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0526390.2 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0551237.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0242489.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0269517.1 | 氨基酸修饰:Arg | ENTIRE_MOL
+CNP0233255.2 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0136938.2 | 氨基酸修饰:Tyr; 氨基酸修饰:Gln; 氨基酸修饰:Gln; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0483831.3 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0309023.2 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0183894.4 | 氨基酸修饰:Lys; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0340500.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0595722.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0090317.1 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0079267.2 | 多肽:Pro-Xaa-Xaa; 多肽:Pro-Xaa; 多肽:Pro-Xaa; 多肽:Pro-Xaa; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0580339.1 | 多肽:Tyr-Xaa; 多肽:Asp-Xaa; 氨基酸修饰:Pro; 氨基酸修饰:Ser; 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0129321.2 | 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0323324.1 | 多肽:Tyr-Xaa; 多肽:Asn-Xaa; 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0437933.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0181010.1 | 氨基酸修饰:Lys; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0382005.2 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0189675.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0476523.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0412833.1 | 氨基酸修饰:Tyr; 氨基酸修饰:Thr; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0182047.3 | 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0201634.2 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0312143.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0112070.0 | 氨基酸修饰:Arg; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0368864.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0601704.3 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0446644.1 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0210036.2 | 氨基酸修饰:His; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0297865.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0259936.1 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0598016.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0561338.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0384973.1 | 氨基酸修饰:Trp | ENTIRE_MOL
+CNP0529509.1 | 氨基酸修饰:Tyr; 氨基酸修饰:Arg; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0467593.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0544795.1 | 氨基酸修饰:Cys; 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0348412.6 | 氨基酸修饰:Val; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0415227.1 | 氨基酸修饰:Leu; 氨基酸修饰:Leu; 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0060924.1 | 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0530785.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0485574.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0572624.1 | 氨基酸修饰:Phe; 多肽:Phe-Xaa; 氨基酸修饰:His; 氨基酸修饰:Asn; 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0065691.0 | 氨基酸修饰:Lys; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0298619.1 | 氨基酸修饰:Thr; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0074527.2 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0491783.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0157778.7 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0481216.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0432292.0 | 多肽:Tyr-Xaa; 多肽:Gln-Xaa; 氨基酸修饰:Gln; 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0556526.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0521776.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0045329.1 | 氨基酸修饰:Tyr; 多肽:Gln-Xaa; 氨基酸修饰:Ser; 氨基酸修饰:Ala; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0581230.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0023398.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0169119.2 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0495423.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0261578.0 | 多肽:Trp-Xaa | ENTIRE_MOL
+CNP0282184.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0339005.3 | 氨基酸修饰:Phe; 氨基酸修饰:Asn; 氨基酸修饰:Thr; 多肽:Thr-Xaa; 多肽:Leu-Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0480282.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0248472.2 | 氨基酸修饰:His; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0499962.2 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0160095.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0454479.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0393087.3 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0214613.0 | 氨基酸修饰:Tyr; 氨基酸修饰:Ser; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0537944.1 | 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0069304.0 | 氨基酸修饰:Lys; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0085949.1 | 氨基酸修饰:Asn | ENTIRE_MOL
+CNP0087096.1 | 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0497613.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0539808.1 | 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0352941.2 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0600897.1 | 氨基酸修饰:Arg; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0113224.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0562610.3 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0044325.3 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0308037.9 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0292415.0 | 氨基酸修饰:Arg; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0603536.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0430227.1 | 氨基酸修饰:Val; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0141659.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0340797.2 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0352761.1 | 多肽:Trp-Xaa | ENTIRE_MOL
+CNP0183742.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0553491.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0002755.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0580056.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0442058.1 | 氨基酸修饰:Tyr; 氨基酸修饰:Gln; 多肽:Gln-Xaa; 多肽:Thr-Xaa | ENTIRE_MOL
+CNP0611196.0 | 氨基酸修饰:Met | ENTIRE_MOL
+CNP0521342.0 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0552593.1 | 氨基酸修饰:Asn | ENTIRE_MOL
+CNP0337040.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0503885.1 | 氨基酸修饰:Arg | ENTIRE_MOL
+CNP0136075.0 | 氨基酸修饰:Arg; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0336525.5 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0335815.2 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0567817.1 | 多肽:Tyr-Xaa; 多肽:Tyr-Xaa-Xaa | ENTIRE_MOL
+CNP0464703.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0044325.2 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0436602.2 | 氨基酸修饰:Arg; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0572437.2 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0500438.1 | 多肽:Trp-Xaa; 氨基酸修饰:Tyr; 多肽:Pro-Xaa; 氨基酸修饰:Cys; 多肽:Cys-Xaa; 多肽:Val-Xaa; 多肽:Val-Xaa; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0484957.0 | 氨基酸修饰:Asp | ENTIRE_MOL
+CNP0503885.6 | 氨基酸修饰:Arg | ENTIRE_MOL
+CNP0101190.1 | 氨基酸修饰:His | ENTIRE_MOL
+CNP0503885.5 | 氨基酸修饰:Arg | ENTIRE_MOL
+CNP0429865.1 | 氨基酸修饰:Val; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0491413.1 | 多肽:Thr-Xaa; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0560996.1 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0349035.5 | 氨基酸修饰:Gln | ENTIRE_MOL
+CNP0335054.1 | 多肽:Trp-Xaa; 氨基酸修饰:Phe; 多肽:Cys-Xaa | ENTIRE_MOL
+CNP0074637.1 | 氨基酸修饰:His | ENTIRE_MOL
+CNP0576916.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0563742.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0495049.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0570709.1 | 多肽:Tyr-Xaa-Xaa; 多肽:Tyr-Xaa | ENTIRE_MOL
+CNP0475590.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0524722.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0486744.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0269517.2 | 氨基酸修饰:Arg | ENTIRE_MOL
+CNP0299606.1 | 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0181226.1 | 氨基酸修饰:Asp | ENTIRE_MOL
+CNP0406523.1 | 多肽:Pro-Xaa-Xaa; 多肽:Pro-Xaa; 多肽:Pro-Xaa; 多肽:Pro-Xaa; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0538301.1 | 氨基酸修饰:Lys; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0336042.5 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0486506.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0429844.1 | 氨基酸修饰:Lys; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0085965.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0083508.2 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0492675.1 | 氨基酸修饰:Phe; 多肽:Phe-Xaa; 氨基酸修饰:His; 氨基酸修饰:Asn; 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0464877.0 | 氨基酸修饰:Lys | ENTIRE_MOL
+CNP0594562.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0570041.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0160095.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0113224.2 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0425933.1 | 多肽:Glu-Xaa; 氨基酸修饰:Pro; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0572437.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0228886.4 | 多肽:Trp-Xaa | ENTIRE_MOL
+CNP0542925.1 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0022105.1 | 氨基酸修饰:Lys; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0235416.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0003047.0 | 氨基酸修饰:Lys | ENTIRE_MOL
+CNP0519382.0 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0377647.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0523552.0 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0464273.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0582706.1 | 氨基酸修饰:Val; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0308037.8 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0507453.1 | 氨基酸修饰:Arg; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0349035.4 | 氨基酸修饰:Gln | ENTIRE_MOL
+CNP0502222.1 | 氨基酸修饰:Gly; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0083038.2 | 氨基酸修饰:Lys | ENTIRE_MOL
+CNP0524872.1 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0469443.2 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0270277.2 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0118252.2 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0503648.0 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0195124.0 | 氨基酸修饰:Arg; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0259936.3 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0074299.2 | 多肽:Gln-Xaa | ENTIRE_MOL
+CNP0290574.0 | 氨基酸修饰:Lys | ENTIRE_MOL
+CNP0499335.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0469921.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0084434.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0351098.1 | 氨基酸修饰:Tyr; 氨基酸修饰:Thr; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0074199.0 | 氨基酸修饰:Gln | ENTIRE_MOL
+CNP0611118.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0610232.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0021881.0 | 氨基酸修饰:Gln; 氨基酸修饰:Gln; 氨基酸修饰:Gly; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0514532.1 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0424893.2 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0568593.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0198770.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0541695.1 | 氨基酸修饰:Phe; 多肽:Asn-Xaa; 氨基酸修饰:Val; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0574716.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0160182.9 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0164295.2 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0533353.1 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0503885.3 | 氨基酸修饰:Arg | ENTIRE_MOL
+CNP0281731.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0601372.2 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0527559.2 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0554183.3 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0220326.1 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0593126.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0131859.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0481435.0 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0588655.1 | 氨基酸修饰:Cys; 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0523336.2 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0218276.0 | 氨基酸修饰:Arg; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0448499.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0281605.0 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0425299.1 | 氨基酸修饰:Tyr; 氨基酸修饰:Gln; 多肽:Thr-Xaa; 氨基酸修饰:Ser; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0316952.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0587075.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0158760.2 | 氨基酸修饰:Glu; 氨基酸修饰:Glu; 氨基酸修饰:Glu | ENTIRE_MOL
+CNP0446928.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0340677.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0339232.1 | 多肽:Tyr-Xaa; 多肽:Asn-Xaa; 氨基酸修饰:Asn | ENTIRE_MOL
+CNP0331172.3 | 氨基酸修饰:Cys; 氨基酸修饰:Cys; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0308776.3 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0269722.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0605236.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0580743.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0586605.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0580945.1 | 氨基酸修饰:Lys; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0259936.2 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0336042.4 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0175197.1 | 氨基酸修饰:His; 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0488359.2 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0060924.2 | 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0532827.1 | 氨基酸修饰:Phe; 多肽:Asn-Xaa; 氨基酸修饰:Val; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0330145.0 | 氨基酸修饰:Gln | ENTIRE_MOL
+CNP0300923.1 | 氨基酸修饰:Tyr; 多肽:Gln-Xaa; 氨基酸修饰:Ser; 氨基酸修饰:Ala; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0176101.2 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0606595.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0587137.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0581107.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Gly; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0382005.3 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0604513.1 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0229182.1 | 氨基酸修饰:Gln | ENTIRE_MOL
+CNP0566106.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0122588.1 | 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0210036.1 | 氨基酸修饰:His; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0331172.2 | 氨基酸修饰:Cys; 氨基酸修饰:Cys; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0581531.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0377647.3 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0262313.0 | 氨基酸修饰:Arg; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0556691.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0047645.1 | 氨基酸修饰:Phe; 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0563341.3 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0217418.4 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0601704.4 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0556526.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0070458.3 | 氨基酸修饰:Phe; 氨基酸修饰:Asn; 氨基酸修饰:Thr; 多肽:Thr-Xaa; 多肽:Leu-Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0337343.1 | 氨基酸修饰:Thr; 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0457138.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0339005.6 | 氨基酸修饰:Phe; 氨基酸修饰:Asn; 氨基酸修饰:Thr; 多肽:Thr-Xaa; 多肽:Leu-Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0265074.1 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0333548.1 | 多肽:Asp-Xaa | ENTIRE_MOL
+CNP0537636.0 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0251168.1 | 多肽:Tyr-Xaa; 多肽:Tyr-Xaa | ENTIRE_MOL
+CNP0189267.4 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0054739.2 | 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0591480.4 | 氨基酸修饰:Ala; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0073714.1 | 氨基酸修饰:Lys; 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0157778.4 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0430033.1 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0280197.1 | 氨基酸修饰:Ala; 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0482104.3 | 氨基酸修饰:Phe; 多肽:Phe-Xaa; 氨基酸修饰:His; 氨基酸修饰:Asn; 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0599686.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0286883.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0175197.2 | 氨基酸修饰:His; 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0431761.1 | 氨基酸修饰:Tyr; 氨基酸修饰:Gln; 多肽:Gln-Xaa; 多肽:Thr-Xaa | ENTIRE_MOL
+CNP0070458.1 | 氨基酸修饰:Phe; 氨基酸修饰:Asn; 氨基酸修饰:Thr; 多肽:Thr-Xaa; 多肽:Leu-Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0297137.4 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0611100.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0406523.2 | 多肽:Pro-Xaa-Xaa; 多肽:Pro-Xaa; 多肽:Pro-Xaa; 多肽:Pro-Xaa; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0186930.1 | 多肽:Glu-Xaa | ENTIRE_MOL
+CNP0339232.3 | 多肽:Tyr-Xaa; 多肽:Asn-Xaa; 氨基酸修饰:Asn | ENTIRE_MOL
+CNP0153830.1 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0269517.3 | 氨基酸修饰:Arg | ENTIRE_MOL
+CNP0268819.1 | 氨基酸修饰:Gln | ENTIRE_MOL
+CNP0593952.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0563341.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0505431.2 | 多肽:Tyr-Xaa; 多肽:Tyr-Xaa-Xaa | ENTIRE_MOL
+CNP0450353.1 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0342143.3 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0042871.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0611391.1 | 氨基酸修饰:Tyr; 氨基酸修饰:Gln; 氨基酸修饰:Pro; 氨基酸修饰:Pro; 多肽:Thr-Xaa | ENTIRE_MOL
+CNP0521184.1 | 氨基酸修饰:Phe; 多肽:Asn-Xaa; 氨基酸修饰:Val; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0507475.0 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0188915.3 | 多肽:Val-Xaa | ENTIRE_MOL
+CNP0582804.3 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0211468.0 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0506505.0 | 多肽:Tyr-Xaa; 多肽:Tyr-Xaa | ENTIRE_MOL
+CNP0486333.1 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0322474.1 | 多肽:Glu-Xaa | ENTIRE_MOL
+CNP0105395.6 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0186930.3 | 多肽:Glu-Xaa | ENTIRE_MOL
+CNP0214242.5 | 氨基酸修饰:Tyr | ENTIRE_MOL
+CNP0540241.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0268646.2 | 氨基酸修饰:Cys; 氨基酸修饰:Cys; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0528328.0 | 氨基酸修饰:Asp | ENTIRE_MOL
+CNP0189267.3 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0602518.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0611404.0 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0082681.1 | 氨基酸修饰:Lys | ENTIRE_MOL
+CNP0574655.2 | 氨基酸修饰:Arg; 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0046806.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0320853.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0511902.1 | 氨基酸修饰:Val; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0047645.4 | 氨基酸修饰:Phe; 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0448203.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0587723.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0379081.3 | 多肽:Val-Xaa | ENTIRE_MOL
+CNP0248881.1 | 氨基酸修饰:Lys; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0157778.3 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0158382.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0182047.2 | 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0437199.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0544524.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0436167.1 | 多肽:Tyr-Xaa; 多肽:Tyr-Xaa; 氨基酸修饰:Gln; 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0494448.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0611405.0 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0259802.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0060924.3 | 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0378142.1 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0506732.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0481717.0 | 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0480392.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0107646.4 | 多肽:Tyr-Xaa; 多肽:Gln-Xaa; 氨基酸修饰:Gln; 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0559417.1 | 氨基酸修饰:Phe; 多肽:Phe-Xaa; 氨基酸修饰:His; 氨基酸修饰:Asn; 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0340677.2 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0551943.1 | 多肽:Thr-Xaa; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0213638.1 | 氨基酸修饰:Phe; 氨基酸修饰:Asn | ENTIRE_MOL
+CNP0598190.1 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0267570.1 | 多肽:Tyr-Xaa-Xaa; 多肽:Tyr-Xaa | ENTIRE_MOL
+CNP0593424.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0074338.1 | 多肽:Gln-Xaa | ENTIRE_MOL
+CNP0411425.2 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0083508.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0083531.1 | 氨基酸修饰:Lys; 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0469443.1 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0188915.1 | 多肽:Val-Xaa | ENTIRE_MOL
+CNP0071791.1 | 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0594374.1 | 氨基酸修饰:Gln | ENTIRE_MOL
+CNP0299858.2 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0199537.0 | 氨基酸修饰:Lys; 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0530261.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0465805.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0426010.2 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0456265.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0457436.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0247161.2 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0440286.1 | 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0318652.0 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0514532.2 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0527925.1 | 氨基酸修饰:Thr; 多肽:Thr-Xaa; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0603213.3 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0124311.1 | 氨基酸修饰:Trp; 氨基酸修饰:Lys; 氨基酸修饰:Asn; 氨基酸修饰:Asn | ENTIRE_MOL
+CNP0611456.0 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0176101.3 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0301866.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0336525.2 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0002613.1 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0501031.1 | 氨基酸修饰:Phe; 多肽:Phe-Xaa; 氨基酸修饰:His; 氨基酸修饰:Asn; 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0160182.3 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0165912.1 | 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0444683.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0425921.1 | 氨基酸修饰:Lys; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0335815.3 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0287824.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0559869.1 | 氨基酸修饰:Phe; 多肽:Phe-Xaa; 氨基酸修饰:His; 氨基酸修饰:Asn; 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0611483.1 | 多肽:Tyr-Xaa; 多肽:Tyr-Xaa; 氨基酸修饰:Gln; 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0520330.1 | 氨基酸修饰:Phe; 多肽:Asn-Xaa; 氨基酸修饰:Val; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0581512.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0336525.4 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0297137.2 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0526390.4 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0291992.1 | 多肽:Tyr-Xaa; 多肽:Tyr-Xaa | ENTIRE_MOL
+CNP0393202.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0309023.1 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0341013.1 | 氨基酸修饰:Phe; 氨基酸修饰:Asn; 氨基酸修饰:Thr; 多肽:Thr-Xaa; 多肽:Leu-Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0308037.4 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0488867.1 | 多肽:Arg-Xaa; 多肽:Gln-Xaa; 多肽:Thr-Xaa | ENTIRE_MOL
+CNP0595158.3 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0194130.0 | 氨基酸修饰:Arg; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0276847.0 | 氨基酸修饰:Arg; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0558777.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0348412.2 | 氨基酸修饰:Val; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0160182.2 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0340500.3 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0441223.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0434055.3 | 氨基酸修饰:Thr; 氨基酸修饰:Val; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0424893.3 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0003131.0 | 氨基酸修饰:Lys | ENTIRE_MOL
+CNP0065487.1 | 氨基酸修饰:Tyr | ENTIRE_MOL
+CNP0573609.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0501307.0 | 氨基酸修饰:Lys; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0221925.2 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0580876.1 | 多肽:Tyr-Xaa; 多肽:Tyr-Xaa | ENTIRE_MOL
+CNP0348412.7 | 氨基酸修饰:Val; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0411425.5 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0329042.2 | 氨基酸修饰:Tyr; 多肽:Gln-Xaa; 氨基酸修饰:Ser; 氨基酸修饰:Ala; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0206883.2 | 氨基酸修饰:Val; 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0439020.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0578837.1 | 氨基酸修饰:Thr; 多肽:Thr-Xaa; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0289169.1 | 氨基酸修饰:His; 氨基酸修饰:Val; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0320061.1 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0521653.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0556069.1 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0466155.0 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0563742.3 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0473753.1 | 氨基酸修饰:Lys; 氨基酸修饰:Ala; 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0583644.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0554013.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0221403.1 | 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0566106.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0492221.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0487276.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0206625.1 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0315667.0 | 氨基酸修饰:Asn | ENTIRE_MOL
+CNP0492913.0 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0320557.1 | 氨基酸修饰:Lys; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0199280.0 | 氨基酸修饰:Lys; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0568524.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0479101.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0537718.1 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0494299.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0306964.1 | 氨基酸修饰:Trp | ENTIRE_MOL
+CNP0573180.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0203418.2 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0287824.3 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0576588.0 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0308037.3 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0340797.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0499429.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0544677.1 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0308037.5 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0598745.3 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0337477.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0002522.1 | 氨基酸修饰:Pro; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0468490.0 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0599467.0 | 氨基酸修饰:Lys; 多肽:Glu-Xaa | ENTIRE_MOL
+CNP0501864.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0175394.2 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0379081.1 | 多肽:Val-Xaa | ENTIRE_MOL
+CNP0338907.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0582804.4 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0378097.2 | 氨基酸修饰:Met | ENTIRE_MOL
+CNP0270282.2 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0336042.1 | 氨基酸修饰:His; 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Thr; 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0247161.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0597405.0 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0244862.1 | 氨基酸修饰:Phe; 氨基酸修饰:Asn; 氨基酸修饰:Thr; 多肽:Thr-Xaa; 多肽:Leu-Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0465680.0 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0268086.0 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0582804.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0083531.2 | 氨基酸修饰:Lys; 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0595722.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0471884.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0434055.1 | 氨基酸修饰:Thr; 氨基酸修饰:Val; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0445624.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0494198.1 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0316952.2 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0500438.2 | 多肽:Trp-Xaa; 氨基酸修饰:Tyr; 多肽:Pro-Xaa; 氨基酸修饰:Cys; 多肽:Cys-Xaa; 多肽:Val-Xaa; 多肽:Val-Xaa; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0217418.3 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0598164.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0248881.2 | 氨基酸修饰:Lys; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0563341.4 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0349035.3 | 氨基酸修饰:Gln | ENTIRE_MOL
+CNP0411425.4 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0563341.2 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0373626.0 | 氨基酸修饰:Trp | ENTIRE_MOL
+CNP0344551.1 | 氨基酸修饰:Gln | ENTIRE_MOL
+CNP0342920.0 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0611469.0 | 氨基酸修饰:His; 氨基酸修饰:Val; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0276957.0 | 氨基酸修饰:His | ENTIRE_MOL
+CNP0378097.4 | 氨基酸修饰:Met | ENTIRE_MOL
+CNP0565839.1 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0116683.0 | 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0544108.1 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0395809.1 | 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0308037.6 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0299795.3 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0507453.2 | 氨基酸修饰:Arg; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0595886.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0315965.0 | 氨基酸修饰:Lys; 氨基酸修饰:Ala; 氨基酸修饰:Ala; 氨基酸修饰:Gly; 多肽:Gly-Xaa | ENTIRE_MOL
+CNP0491520.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0352184.3 | 多肽:Tyr-Xaa; 多肽:Gln-Xaa; 氨基酸修饰:Gln; 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0425687.1 | 氨基酸修饰:Tyr; 氨基酸修饰:Gln; 多肽:Thr-Xaa; 氨基酸修饰:Ser; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0270282.4 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0488822.0 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0294472.0 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0348507.1 | 氨基酸修饰:Lys; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0204972.0 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0297137.3 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0497836.1 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0230512.1 | 氨基酸修饰:Val; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0320098.1 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0371858.0 | 氨基酸修饰:Gln | ENTIRE_MOL
+CNP0489872.1 | 多肽:Thr-Xaa; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0504618.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0426147.1 | 氨基酸修饰:Tyr; 氨基酸修饰:Gln; 多肽:Thr-Xaa; 氨基酸修饰:Ser; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0153830.3 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0467996.2 | 多肽:Tyr-Xaa; 多肽:Gln-Xaa; 氨基酸修饰:Gln; 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0527610.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0349063.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0087096.3 | 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0570197.1 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0230512.2 | 氨基酸修饰:Val; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0327651.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0378097.3 | 氨基酸修饰:Met | ENTIRE_MOL
+CNP0293198.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0029654.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0322416.2 | 氨基酸修饰:Val; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0481412.0 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0605696.1 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0069155.0 | 氨基酸修饰:Lys; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0113049.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0456748.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0464529.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0429468.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0578837.2 | 氨基酸修饰:Thr; 多肽:Thr-Xaa; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0127140.2 | 氨基酸修饰:Trp | ENTIRE_MOL
+CNP0556526.3 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0529759.1 | 多肽:Tyr-Xaa; 多肽:Asp-Xaa; 氨基酸修饰:Pro; 氨基酸修饰:Ser; 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0430033.2 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0246863.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0591709.1 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0598745.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0426948.1 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0126769.0 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0105395.2 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0202621.2 | 氨基酸修饰:Lys; 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0352863.1 | 多肽:Tyr-Xaa; 多肽:Asn-Xaa; 氨基酸修饰:Asn | ENTIRE_MOL
+CNP0584423.1 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0157778.5 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0521470.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0459291.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0451202.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0339005.2 | 氨基酸修饰:Phe; 氨基酸修饰:Asn; 氨基酸修饰:Thr; 多肽:Thr-Xaa; 多肽:Leu-Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0435338.1 | 多肽:Tyr-Xaa; 多肽:Gln-Xaa; 氨基酸修饰:Gln; 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0467996.1 | 多肽:Tyr-Xaa; 多肽:Gln-Xaa; 氨基酸修饰:Gln; 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0488359.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0563276.0 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0160182.15 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0587911.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0083038.1 | 氨基酸修饰:Lys | ENTIRE_MOL
+CNP0371860.1 | 氨基酸修饰:Ala; 氨基酸修饰:Ala; 氨基酸修饰:Ala; 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0347886.0 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0157778.6 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0393087.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0571908.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0169119.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0114037.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0287824.2 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0259802.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0554183.5 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0308165.1 | 多肽:Glu-Xaa | ENTIRE_MOL
+CNP0348412.3 | 氨基酸修饰:Val; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0495281.1 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0070458.2 | 氨基酸修饰:Phe; 氨基酸修饰:Asn; 氨基酸修饰:Thr; 多肽:Thr-Xaa; 多肽:Leu-Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0437127.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0491413.2 | 多肽:Thr-Xaa; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0338907.2 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0038410.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0601704.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0569589.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0074901.1 | 多肽:Tyr-Xaa-Xaa; 多肽:Tyr-Xaa | ENTIRE_MOL
+CNP0554183.4 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0447514.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0183742.5 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0158086.1 | 氨基酸修饰:Ser; 氨基酸修饰:Ser; 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0587754.1 | 氨基酸修饰:Thr; 氨基酸修饰:Val; 多肽:Leu-Xaa | ENTIRE_MOL
+CNP0601770.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0488972.1 | 氨基酸修饰:Thr; 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0490172.1 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0164295.3 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0578718.1 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0382533.1 | 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0479785.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0083547.1 | 氨基酸修饰:Lys; 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0183742.4 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0129321.3 | 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0203418.5 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0160182.14 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0054739.3 | 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0457990.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0227427.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0203418.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0599953.0 | 氨基酸修饰:Asp | ENTIRE_MOL
+CNP0601372.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0478045.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0054921.2 | 氨基酸修饰:Tyr; 氨基酸修饰:Gln; 氨基酸修饰:Ser; 氨基酸修饰:Ala; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0483831.4 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0556334.1 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0470609.1 | 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0128626.1 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0609144.0 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0165912.2 | 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0582462.1 | 氨基酸修饰:Arg; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0352860.1 | 多肽:Tyr-Xaa; 多肽:Asn-Xaa; 氨基酸修饰:Asn | ENTIRE_MOL
+CNP0252747.5 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0229700.0 | 氨基酸修饰:Glu | ENTIRE_MOL
+CNP0339005.4 | 氨基酸修饰:Phe; 氨基酸修饰:Asn; 氨基酸修饰:Thr; 多肽:Thr-Xaa; 多肽:Leu-Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0462218.1 | 氨基酸修饰:Lys; 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0495049.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0479646.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0276237.2 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0605018.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0105395.3 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0605379.1 | 多肽:Thr-Xaa; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0577386.1 | 氨基酸修饰:Phe; 多肽:Asn-Xaa; 氨基酸修饰:Val; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0577825.0 | 氨基酸修饰:Asn | ENTIRE_MOL
+CNP0201353.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0576179.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0023398.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0051674.0 | 氨基酸修饰:Lys | ENTIRE_MOL
+CNP0557703.1 | 氨基酸修饰:Met | ENTIRE_MOL
+CNP0351602.1 | 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0524841.1 | 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0441176.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0492970.1 | 氨基酸修饰:Phe; 多肽:Asn-Xaa; 氨基酸修饰:Val; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0189267.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0393087.4 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0511826.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0266126.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0581460.2 | 多肽:Tyr-Xaa; 多肽:Tyr-Xaa-Xaa | ENTIRE_MOL
+CNP0144357.1 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0160182.11 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0235105.2 | 多肽:Phe-Xaa; 氨基酸修饰:Asn; 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0198041.1 | 氨基酸修饰:Met | ENTIRE_MOL
+CNP0460890.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0547949.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0085030.2 | 多肽:Glu-Xaa | ENTIRE_MOL
+CNP0349035.1 | 氨基酸修饰:Gln | ENTIRE_MOL
+CNP0045329.2 | 氨基酸修饰:Tyr; 多肽:Gln-Xaa; 氨基酸修饰:Ser; 氨基酸修饰:Ala; 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0589372.1 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0173276.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0183742.7 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0591480.3 | 氨基酸修饰:Ala; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0265074.3 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0360534.1 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0595130.1 | 氨基酸修饰:Phe; 多肽:Phe-Xaa; 氨基酸修饰:His; 氨基酸修饰:Asn; 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0525919.0 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0482714.1 | 氨基酸修饰:Cys; 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0522186.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0580760.2 | 氨基酸修饰:Phe; 多肽:Phe-Xaa; 氨基酸修饰:His; 氨基酸修饰:Asn; 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0203418.3 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0118252.1 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0411425.3 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0557663.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0474407.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0220274.2 | 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0299795.5 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0336191.2 | 氨基酸修饰:Tyr; 多肽:His-Xaa; 氨基酸修饰:Gln; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0563742.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0266126.2 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0092547.1 | 氨基酸修饰:Lys; 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0259941.0 | 氨基酸修饰:Arg; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0441563.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0437705.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0181226.2 | 氨基酸修饰:Asp | ENTIRE_MOL
+CNP0588186.1 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0461316.1 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0595661.1 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0576113.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0320623.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0182047.1 | 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0377647.4 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0551011.1 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0214242.2 | 氨基酸修饰:Tyr | ENTIRE_MOL
+CNP0323324.2 | 多肽:Tyr-Xaa; 多肽:Asn-Xaa; 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0540982.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0600463.2 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0604336.0 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0516115.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0491777.3 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0255380.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0214242.6 | 氨基酸修饰:Tyr | ENTIRE_MOL
+CNP0002754.1 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0067408.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0190934.1 | 氨基酸修饰:Arg | ENTIRE_MOL
+CNP0580056.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0308776.2 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0603213.2 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0282138.2 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0103783.2 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0210174.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0325289.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0600252.1 | 氨基酸修饰:Lys; 多肽:Ala-Xaa; 多肽:Ala-Xaa | ENTIRE_MOL
+CNP0203418.4 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0143559.4 | 氨基酸修饰:Cys; 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0074736.1 | 多肽:Glu-Xaa | ENTIRE_MOL
+CNP0071946.2 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0194140.4 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0425687.2 | 氨基酸修饰:Tyr; 氨基酸修饰:Gln; 多肽:Thr-Xaa; 氨基酸修饰:Ser; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0073738.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0536895.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0611409.0 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0209786.0 | 氨基酸修饰:Glu | ENTIRE_MOL
+CNP0378269.1 | 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0603697.1 | 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0202621.1 | 氨基酸修饰:Lys; 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0252747.4 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0573183.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0379081.2 | 多肽:Val-Xaa | ENTIRE_MOL
+CNP0541560.0 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0186930.2 | 多肽:Glu-Xaa | ENTIRE_MOL
+CNP0466462.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0071946.1 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0080979.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0554183.2 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0516781.1 | 多肽:Tyr-Xaa; 多肽:Lys-Xaa; 氨基酸修饰:Gln; 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0570868.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0160182.10 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0274259.2 | 氨基酸修饰:Glu; 氨基酸修饰:Glu; 氨基酸修饰:Glu | ENTIRE_MOL
+CNP0555372.1 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0359709.1 | 氨基酸修饰:Phe; 氨基酸修饰:Asn | ENTIRE_MOL
+CNP0156960.1 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0192132.0 | 氨基酸修饰:Arg; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0142769.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0611393.1 | 氨基酸修饰:Tyr; 氨基酸修饰:Gln; 氨基酸修饰:Pro; 氨基酸修饰:Pro; 多肽:Thr-Xaa | ENTIRE_MOL
+CNP0591480.2 | 氨基酸修饰:Ala; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0539644.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0389162.1 | 氨基酸修饰:Gln | ENTIRE_MOL
+CNP0486744.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0565300.2 | 多肽:Tyr-Xaa; 多肽:Tyr-Xaa-Xaa | ENTIRE_MOL
+CNP0182047.4 | 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0600148.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0259568.2 | 氨基酸修饰:Ala; 氨基酸修饰:Xaa; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0183894.1 | 氨基酸修饰:Lys; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0265074.2 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0604180.1 | 氨基酸修饰:Val; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0540128.2 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0137308.0 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0530377.2 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0214242.4 | 氨基酸修饰:Tyr | ENTIRE_MOL
+CNP0443213.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0431117.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0054739.1 | 氨基酸修饰:Phe | ENTIRE_MOL
+CNP0599889.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0183894.2 | 氨基酸修饰:Lys; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0453880.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0083547.2 | 氨基酸修饰:Lys; 氨基酸修饰:Ala; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0288312.1 | 氨基酸修饰:Glu | ENTIRE_MOL
+CNP0545459.0 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0161672.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0282138.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0189675.3 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0553972.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0348412.1 | 氨基酸修饰:Val; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0473998.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0434064.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0282138.3 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0320061.3 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0217418.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0003662.0 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0519268.1 | 氨基酸修饰:Lys; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0491353.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0526601.1 | 氨基酸修饰:Gln | ENTIRE_MOL
+CNP0558144.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0251468.1 | 氨基酸修饰:Phe; 多肽:Thr-Xaa | ENTIRE_MOL
+CNP0563607.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0140948.1 | 氨基酸修饰:Lys; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0309023.3 | 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0573167.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0566090.0 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0502626.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0606656.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0543263.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0508768.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0465317.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0595722.3 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0105395.7 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0606341.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0002753.1 | 氨基酸修饰:Tyr | ENTIRE_MOL
+CNP0103783.1 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0496932.1 | 氨基酸修饰:Leu | ENTIRE_MOL
+CNP0490464.0 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0281404.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0143559.3 | 氨基酸修饰:Cys; 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0482104.2 | 氨基酸修饰:Phe; 多肽:Phe-Xaa; 氨基酸修饰:His; 氨基酸修饰:Asn; 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0454748.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0430700.1 | 多肽:Tyr-Xaa; 多肽:Tyr-Xaa; 氨基酸修饰:Gln; 氨基酸修饰:Thr | ENTIRE_MOL
+CNP0382005.5 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0274259.1 | 氨基酸修饰:Glu; 氨基酸修饰:Glu; 氨基酸修饰:Glu | ENTIRE_MOL
+CNP0548707.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0223000.2 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0521653.2 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0543263.3 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0217418.5 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0140466.2 | 氨基酸修饰:Cys | ENTIRE_MOL
+CNP0274240.0 | 氨基酸修饰:Arg; 氨基酸修饰:Thr; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0563536.0 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0378142.3 | 氨基酸修饰:Tyr; 氨基酸修饰:Tyr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0227427.3 | 多肽:Tyr-Xaa; 氨基酸修饰:Tyr; 氨基酸修饰:Xaa | ENTIRE_MOL
+CNP0483575.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0531585.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0183894.3 | 氨基酸修饰:Lys; 氨基酸修饰:Val | ENTIRE_MOL
+CNP0486329.1 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0242562.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0352972.0 | 氨基酸修饰:Val | ENTIRE_MOL
+CNP0318266.1 | 氨基酸修饰:Pro | ENTIRE_MOL
+CNP0039533.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0011621.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0462570.1 | 氨基酸修饰:Ser | ENTIRE_MOL
+CNP0603213.1 | 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0267570.2 | 多肽:Tyr-Xaa-Xaa; 多肽:Tyr-Xaa | ENTIRE_MOL
+CNP0266126.3 | 氨基酸修饰:Gly | ENTIRE_MOL
+CNP0556132.1 | 氨基酸修饰:His; 氨基酸修饰:Thr; 氨基酸修饰:Ala | ENTIRE_MOL
+CNP0483831.2 | 多肽:Pro-Xaa | ENTIRE_MOL
+CNP0442058.2 | 氨基酸修饰:Tyr; 氨基酸修饰:Gln; 多肽:Gln-Xaa; 多肽:Thr-Xaa | ENTIRE_MOL
