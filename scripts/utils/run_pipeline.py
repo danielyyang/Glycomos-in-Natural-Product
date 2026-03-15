@@ -1,3 +1,8 @@
+# =============================================================================
+# ⚠️ DEPRECATED — 此脚本为早期管线入口，引用了不存在的模块 (aggregator, profiler, researcher)。
+# ⚠️ DEPRECATED — This is an early pipeline entry script that references non-existent
+# modules (aggregator, profiler, researcher). Use scripts/main_pipeline.py instead.
+# =============================================================================
 import os
 import sys
 import argparse

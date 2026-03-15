@@ -13,18 +13,55 @@ from rdkit import Chem
 # while the rest of the ring stereochemistry precisely defines the sugar type (D-Glc, etc.).
 
 _MONOSACCHARIDE_SMARTS_DEFS = {
+    # === 基础己糖 (Standard Hexoses) ===
     # D-Glucopyranose (Glc) - 基础赤道向构型
     "Glc": "[C:1]1([*:11])[C@H:2]([O:12])[C@@H:3]([O:13])[C@H:4]([O:14])[C@H:5]([CH2:6][O:16])[O:5]1",
     # D-Galactopyranose (Gal) - C4 差向异构（轴向）
     "Gal": "[C:1]1([*:11])[C@H:2]([O:12])[C@@H:3]([O:13])[C@@H:4]([O:14])[C@H:5]([CH2:6][O:16])[O:5]1",
     # D-Mannopyranose (Man) - C2 差向异构（轴向）
     "Man": "[C:1]1([*:11])[C@@H:2]([O:12])[C@@H:3]([O:13])[C@H:4]([O:14])[C@H:5]([CH2:6][O:16])[O:5]1",
+
+    # === 稀有己糖 (Rare Hexoses) ===
+    # D-Allose (All) - C3 差向异构
+    "All": "[C:1]1([*:11])[C@H:2]([O:12])[C@H:3]([O:13])[C@H:4]([O:14])[C@H:5]([CH2:6][O:16])[O:5]1",
+    # D-Talose (Tal) - C2,C4 差向异构
+    "Tal": "[C:1]1([*:11])[C@@H:2]([O:12])[C@H:3]([O:13])[C@@H:4]([O:14])[C@H:5]([CH2:6][O:16])[O:5]1",
+    # D-Altrose (Alt) - C2,C3 差向异构
+    "Alt": "[C:1]1([*:11])[C@@H:2]([O:12])[C@H:3]([O:13])[C@H:4]([O:14])[C@H:5]([CH2:6][O:16])[O:5]1",
+    # D-Gulose (Gul) - C3,C4 差向异构
+    "Gul": "[C:1]1([*:11])[C@H:2]([O:12])[C@H:3]([O:13])[C@@H:4]([O:14])[C@H:5]([CH2:6][O:16])[O:5]1",
+
+    # === 脱氧糖 (Deoxy Sugars) ===
     # L-Fucopyranose (Fuc) - 6-脱氧，L-半乳糖构型
     "Fuc": "[C:1]1([*:11])[C@@H:2]([O:12])[C@H:3]([O:13])[C@H:4]([O:14])[C@@H:5]([CH3:6])[O:5]1",
+    # L-Rhamnopyranose (Rha) - 6-脱氧-L-甘露糖构型
+    "Rha": "[C:1]1([*:11])[C@H:2]([O:12])[C@H:3]([O:13])[C@@H:4]([O:14])[C@H:5]([CH3:6])[O:5]1",
+    # D-Quinovose (Qui) - 6-deoxy-D-glucose
+    "Qui": "[C:1]1([*:11])[C@H:2]([O:12])[C@@H:3]([O:13])[C@H:4]([O:14])[C@H:5]([CH3:6])[O:5]1",
+
+    # === 氨基糖 (Amino Sugars) ===
     # N-Acetyl-D-glucosamine (GlcNAc) - C2 被乙酰氨基取代
     "GlcNAc": "[C:1]1([*:11])[C@H:2]([N:12]C(=O)C)[C@@H:3]([O:13])[C@H:4]([O:14])[C@H:5]([CH2:6][O:16])[O:5]1",
+    # N-Acetyl-D-galactosamine (GalNAc) - C2 被乙酰氨基取代 (Gal 构型)
+    "GalNAc": "[C:1]1([*:11])[C@H:2]([N:12]C(=O)C)[C@@H:3]([O:13])[C@@H:4]([O:14])[C@H:5]([CH2:6][O:16])[O:5]1",
+    # N-Acetyl-D-mannosamine (ManNAc) - C2 被乙酰氨基取代 (Man 构型)
+    "ManNAc": "[C:1]1([*:11])[C@@H:2]([N:12]C(=O)C)[C@@H:3]([O:13])[C@H:4]([O:14])[C@H:5]([CH2:6][O:16])[O:5]1",
+
+    # === 糖醛酸 (Uronic Acids) — C6 = COOH ===
+    # D-Glucuronic Acid (GlcA)
+    "GlcA": "[C:1]1([*:11])[C@H:2]([O:12])[C@@H:3]([O:13])[C@H:4]([O:14])[C@H:5]([C:6](=O)[O:16])[O:5]1",
+    # D-Galacturonic Acid (GalA)
+    "GalA": "[C:1]1([*:11])[C@H:2]([O:12])[C@@H:3]([O:13])[C@@H:4]([O:14])[C@H:5]([C:6](=O)[O:16])[O:5]1",
+    # L-Iduronic Acid (IdoA)
+    "IdoA": "[C:1]1([*:11])[C@H:2]([O:12])[C@@H:3]([O:13])[C@H:4]([O:14])[C@@H:5]([C:6](=O)[O:16])[O:5]1",
+
+    # === 戊糖 (Pentoses) ===
     # D-Xylopyranose (Xyl) - 戊糖（无 C6）
     "Xyl": "[C:1]1([*:11])[C@H:2]([O:12])[C@@H:3]([O:13])[C@H:4]([O:14])[CH2:5][O:5]1",
+    # L-Arabinopyranose (Ara) - 皂苷/黄酮苷极常见
+    "Ara": "[C:1]1([*:11])[C@@H:2]([O:12])[C@H:3]([O:13])[C@H:4]([O:14])[CH2:5][O:5]1",
+    # D-Ribopyranose (Rib)
+    "Rib": "[C:1]1([*:11])[C@H:2]([O:12])[C@H:3]([O:13])[C@H:4]([O:14])[CH2:5][O:5]1",
 }
 
 MONOSACCHARIDE_LIBRARY = {k: Chem.MolFromSmarts(v) for k, v in _MONOSACCHARIDE_SMARTS_DEFS.items()}
@@ -88,14 +125,32 @@ NUCLEOBASE_LIBRARY = {
 PHOSPHATE_SMARTS = Chem.MolFromSmarts("P(=O)(O)(O)O")
 
 # Reaction SMARTS (SMIRKS) for Modification Stripping
-# Format: [Target_Atom_In_Sugar:1]-[Modification_Atoms]>>[Target_Atom_In_Sugar:1][H]
 _STRIPPING_SMIRKS_DEFS = {
-    "Sulfated": "[O:1]S(=O)(=O)[O-]",  # O-Sulfate
-    "Phosphated": "[O:1]P(=O)(O)O",    # O-Phosphate
-    "Acetylated": "[O:1]C(=O)C",       # O-Acetyl
-    "Methylated": "[O:1]C",            # O-Methyl (careful to run this after other C attachments if needed)
-    "N-Acetylated": "[N:1]C(=O)C",     # N-Acetyl (e.g. GlcNAc -> GlcN)
-    "N-Sulfated": "[N:1]S(=O)(=O)[O-]" # N-Sulfate
+    # === 1. 无机酸修饰 (Inorganic Esters) ===
+    "Sulfated": "[O:1]S(=O)(=O)[O-,OH]",        # 硫酸酯化 (O-Sulfate)
+    "Phosphated": "[O:1]P(=O)([O-,OH])[O-,OH]", # 磷酸酯化 (O-Phosphate)
+    # === 2. 基础与复杂脂肪酸酯 (Aliphatic Esters) ===
+    "Acetylated": "[O:1]C(=O)[CH3]",            # 乙酰化 (O-Acetyl)
+    "Formylated": "[O:1]C(=O)[H]",              # 甲酰化 (O-Formyl)
+    "Malonylated": "[O:1]C(=O)CC(=O)[OH,O-]",   # 丙二酰化 (O-Malonyl)
+    "Succinylated": "[O:1]C(=O)CCC(=O)[OH,O-]", # 琥珀酰化 (O-Succinyl)
+    "Lactylated": "[O:1]C(C)C(=O)[OH,O-]",      # 乳酰化 (O-Lactyl)
+    "Tigloylated": "[O:1]C(=O)C(=C)C",          # 巴豆酰/当归酰化 (O-Tigloyl/Angeloyl)
+    # === 3. 芳香族高亮修饰 (Aromatic Esters - 天然产物重灾区) ===
+    "Galloylated": "[O:1]C(=O)c1cc(O)c(O)c(O)c1",       # 没食子酰化 (O-Galloyl)
+    "Benzoylated": "[O:1]C(=O)c1ccccc1",                # 苯甲酰化 (O-Benzoyl)
+    "p-Coumaroylated": "[O:1]C(=O)/C=C/c1ccc(O)cc1",    # 对香豆酰化 (O-p-Coumaroyl)
+    "Caffeoylated": "[O:1]C(=O)/C=C/c1ccc(O)c(O)c1",    # 咖啡酰化 (O-Caffeoyl)
+    "Feruloylated": "[O:1]C(=O)/C=C/c1ccc(O)c(OC)c1",   # 阿魏酰化 (O-Feruloyl)
+    "Sinapoylated": "[O:1]C(=O)/C=C/c1cc(OC)c(O)c(OC)c1", # 芥子酰化 (O-Sinapoyl)
+    # === 4. 醚类修饰 (Ethers) ===
+    "Methylated": "[O:1][CH3]",                 # 甲醚化 (O-Methyl, 已修复为安全末端甲基)
+    # === 5. 氨基特种修饰 (N-Modifications) ===
+    "N-Acetylated": "[N:1]C(=O)[CH3]",          # N-乙酰化 (N-Acetyl)
+    "N-Glycolylated": "[N:1]C(=O)CO",           # N-羟乙酰化 (N-Glycolyl)
+    "N-Sulfated": "[N:1]S(=O)(=O)[O-,OH]",      # N-硫酸酯化 (N-Sulfate)
+    "N-Methylated": "[N:1][CH3]",               # N-甲基化 (N-Methyl)
+    "N-Formylated": "[N:1]C(=O)[H]"             # N-甲酰化 (N-Formyl)
 }
 
 STRIPPING_REACTIONS = {}

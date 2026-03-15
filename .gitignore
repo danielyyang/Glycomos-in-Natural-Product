@@ -1,17 +1,42 @@
 # Python
 __pycache__/
 *.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
 
-# Data & Large Files
-images/
+# Data & Large Files (不纳入版本控制 / Do not track)
 data/
 reports/
+images/
+log/
 
+# Debug scripts output
+tests/debug_log*.txt
+
+# Editors & IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Conda / Virtual Environments
+.conda/
+.venv/
+venv/
 
 # Logs & Temporary
 *.log
 *.tmp
 
-# Editors
-.vscode/
-.idea/
+# Jupyter
+.ipynb_checkpoints/
+
+# Pytest
+.pytest_cache/

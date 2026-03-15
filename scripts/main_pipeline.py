@@ -203,7 +203,10 @@ def main():
     
     df_result, class_imputed = taxonomy_gap_filling.fill_classification(df_result)
     
-    # In future, np_classifier_superclass could be filled similarly, but for now we follow the exact logic available 
+    # P6 二级分类填补: np_classifier_superclass
+    # (P6 Secondary classification: fill np_classifier_superclass via same strategy)
+    print("--- [Phase 6b] NP Classifier Superclass Imputation ---")
+    df_result, np_imputed = taxonomy_gap_filling.fill_np_classifier(df_result)
     
     excel_classification = os.path.join(reports_dir, "Coconut_Classification.xlsx")
     print(f"Exporting classification sheets to {excel_classification}...")

@@ -29,6 +29,56 @@ def strip_and_record_modifications(sugar_mol):
             
     return modifications
 
+def _classifyAcylGroup(mol, carbonylCarbonIdx, esterOxygenIdx):
+    """
+    从酯键/酰胺键的羰基碳出发, BFS 沿 C-C 键计数碳原子数 → 精确分类酰基。
+    Classify acyl group by counting carbons via C-C BFS from carbonyl carbon.
+    Heteroatoms (O, N, S, P) act as hard barriers — only contiguous C-C bonds
+    are followed.
+
+    设计意图: 区分乙酰基 (2C), 丙酰 (3C), 丁酰 (4C), 异戊酰 (5C), 己酰 (6C)
+    Design: distinguish Ac(2C), Propionyl(3C), Butyryl(4C), Isovaleryl(5C), Hexanoyl(6C)
+
+    Args:
+        mol: RDKit 分子对象
+        carbonylCarbonIdx: 羰基碳的原子索引 (atom index of carbonyl carbon C(=O))
+        esterOxygenIdx: 酯氧的原子索引 (atom index of ester oxygen, used as barrier)
+
+    Returns:
+        str: 修饰标签 (e.g. "O-Ac", "Propionyl", "Butyryl", "Isovaleryl", "Hexanoyl")
+    """
+    visited = {esterOxygenIdx}  # 酯氧作为屏障, 不向回走 (ester O acts as barrier)
+    queue = [carbonylCarbonIdx]
+    visited.add(carbonylCarbonIdx)
+    carbonCount = 0
+
+    while queue:
+        idx = queue.pop(0)
+        atom = mol.GetAtomWithIdx(idx)
+        if atom.GetAtomicNum() == 6:
+            carbonCount += 1
+        for nbr in atom.GetNeighbors():
+            nIdx = nbr.GetIdx()
+            if nIdx in visited:
+                continue
+            visited.add(nIdx)
+            # 杂原子截断铁律: O(8), N(7), S(16), P(15) → 硬停
+            # Heteroatom barrier: stop at O, N, S, P (don't follow)
+            if nbr.GetAtomicNum() != 6:
+                continue
+            queue.append(nIdx)
+
+    # 碳数 → 酰基名称映射 (Carbon count → acyl name mapping)
+    ACYL_NAMES = {
+        2: "O-Ac",          # 乙酰基 (Acetyl, CH₃CO-)
+        3: "Propionyl",     # 丙酰基 (Propionyl, CH₃CH₂CO-)
+        4: "Butyryl",       # 丁酰基 (Butyryl, CH₃(CH₂)₂CO-)
+        5: "Isovaleryl",    # 异戊酰基 (Isovaleryl, (CH₃)₂CHCH₂CO-)
+        6: "Hexanoyl",      # 己酰基 (Hexanoyl)
+        7: "Heptanoyl",     # 庚酰基 (Heptanoyl)
+    }
+    return ACYL_NAMES.get(carbonCount, f"Acyl-{carbonCount}C")
+
 def find_mapped_sugar_units(mol):
     """
     1. Finds all potential sugar rings topologically.
@@ -53,19 +103,69 @@ def find_mapped_sugar_units(mol):
     nucleo_pats = list(NUCLEOBASE_LIBRARY.values())
     
     valid_rings = []
+    ring_set_cache = set()
     for ring in potential_rings:
+        ring_set = set(ring)
         is_fused = any(ri.NumAtomRings(idx) > 1 for idx in ring)
-        if is_fused: continue
-            
-        invalid_connection = False
-        for idx in ring:
-            atom = mol.GetAtomWithIdx(idx)
-            for bond in atom.GetBonds():
-                if bond.GetOtherAtomIdx(idx) not in ring and bond.GetBondType() != Chem.BondType.SINGLE:
-                    invalid_connection = True
+        if is_fused:
+            # 颁布"桥连/宏环糖"拓扑豁免法案 (Stapled Sugar Exemption)
+            # 评估所有与当前糖环共享原子的外部环 (Evaluate exemptions for all externally shared rings)
+            all_shared_rings_exempt = True
+            for other_ring in ri.AtomRings():
+                other_ring_set = set(other_ring)
+                if other_ring_set == ring_set:
+                    continue
+                
+                # 如果这个外部环和我们共享了原子 (If they share atoms: Fused/Bridged/Spiro)
+                shared_atoms = ring_set.intersection(other_ring_set)
+                if not shared_atoms:
+                    continue
+                    
+                # === 拓扑铁律：多环含氧聚醚检测 (Polycyclic Oxygenated Polyether Detection) ===
+                # 如果两个含氧环共享一条边 (≥2 原子)，且外部环也是含氧五/六元环，
+                # 说明这极其可能是聚醚类有机多环体系 (如莫能菌素)，绝对不是糖！
+                # If two oxygen-containing rings share an edge (≥2 atoms), and the other
+                # ring is also a 5/6-membered oxygenated ring, this is a polyether, NOT sugar.
+                if len(shared_atoms) >= 2 and len(other_ring) in (5, 6):
+                    other_symbols = [mol.GetAtomWithIdx(i).GetSymbol() for i in other_ring]
+                    if other_symbols.count('O') >= 1:
+                        # 两个含氧环共享一条边 → 聚醚拓扑，强制拒绝
+                        # Two oxygen-containing rings sharing an edge → polyether topology, reject
+                        all_shared_rings_exempt = False
+                        break
+
+                # 豁免条件 A (宏环豁免): 外部环是一个大环 (环原子数 >= 8)，说明这是大环交联绝对允许
+                is_macrocycle = len(other_ring) >= 8
+                
+                # 豁免条件 B (缩醛/脱水桥豁免): 外部环是一个纯由碳和氧组成的小环 (如 1,6-脱水桥或 4,6-缩酮) 且必须包含氧！
+                # 且必须只共享 1 个原子 (Spiro junction, 如螺环缩酮)
+                other_atoms = [mol.GetAtomWithIdx(i) for i in other_ring]
+                symbols = [a.GetSymbol() for a in other_atoms]
+                is_acetal_bridge = all(sym in ('C', 'O') for sym in symbols) and ('O' in symbols)
+                
+                if not (is_macrocycle or is_acetal_bridge):
+                    all_shared_rings_exempt = False
                     break
-            if invalid_connection: break
-        if invalid_connection: continue
+                        
+            if not all_shared_rings_exempt:
+                continue
+
+        # === 不饱和环检测 (Unsaturated Ring Bond Detection) ===
+        # 仅检查 **环内键** (ring-internal bonds) 是否为 SINGLE。
+        # 环外键 (如 C=O 羧基, C=O 乙酰基) 不影响糖环本身的饱和度判定。
+        # Only check bonds BETWEEN ring atoms for saturation. Exocyclic bonds
+        # (e.g., C=O of uronic acids, acetyl groups) do NOT disqualify a sugar ring.
+        has_unsaturated_ring_bond = False
+        for i, idx1 in enumerate(ring):
+            for idx2 in ring[i+1:]:
+                bond = mol.GetBondBetweenAtoms(idx1, idx2)
+                if bond and bond.GetBondType() != Chem.BondType.SINGLE:
+                    has_unsaturated_ring_bond = True
+                    break
+            if has_unsaturated_ring_bond:
+                break
+        if has_unsaturated_ring_bond:
+            continue
             
         is_nucleoside = False
         if len(ring) == 5:
@@ -100,6 +200,88 @@ def find_mapped_sugar_units(mol):
                                 if nnbr.GetSymbol() in ('O', 'N', 'S', 'P') and nnbr.GetIdx() != atom.GetIdx():
                                     exo_count += 1
         if exo_count < 2:
+            continue
+
+        # === 羟基密度门控 (Hydroxyl Density Gate) ===
+        # 真正的糖环碳上必须有足够的 -OH 基团 (如 Glc=4, Xyl=3, dHex=3)
+        # 非糖含氧杂环 (如四氢吡喃类) 通常 -OH 很少
+        # True sugar ring carbons must have sufficient -OH groups.
+        # Non-sugar oxacycles (tetrahydropyrans, cyclitol derivatives) typically have fewer.
+        hydroxylCount = 0
+        ring_set_local = set(ring)
+        for idx in ring:
+            atom = mol.GetAtomWithIdx(idx)
+            if atom.GetSymbol() != 'C':
+                continue
+            for nbr in atom.GetNeighbors():
+                if nbr.GetIdx() in ring_set_local:
+                    continue
+                # 直接 -OH: O 原子且度为 1 (仅连一个重原子) 或度为 2 (含 H)
+                # Direct -OH: oxygen neighbor outside ring with degree ≤ 2 (terminal or OH)
+                if nbr.GetSymbol() == 'O' and nbr.GetDegree() <= 2:
+                    # 排除酯键和缩醛键的 O (这些 O 度通常为 2 且连着 C=O 或另一个 C)
+                    # Exclude ester/acetal O (connected to C=O or another C)
+                    isTerminalOH = True
+                    for onnbr in nbr.GetNeighbors():
+                        if onnbr.GetIdx() == idx:
+                            continue
+                        # 如果 O 连着另一个碳 → 可能是糖苷键 O、甲氧基等，仍算有 O
+                        # If O connects to another C → glycosidic O, still valid
+                    hydroxylCount += 1
+                elif nbr.GetSymbol() == 'N':
+                    # 氨基也算作等价的极性取代基 (Amino counts as equivalent polar substituent)
+                    hydroxylCount += 1
+        if hydroxylCount < 2:
+            continue
+
+        # === 手性中心门控 (Chiral Center Gate) ===
+        # 真正的糖环有多个手性碳 (Glc=4, Xyl=3, 最少的如 glyceraldehyde 也有 1)
+        # 非糖杂环通常 0-1 个手性中心
+        # True sugar rings have multiple chiral carbons (Glc=4, Xyl=3).
+        # Non-sugar heterocycles typically have 0-1 chiral centers.
+        chiralRingCarbons = 0
+        for idx in ring:
+            atom = mol.GetAtomWithIdx(idx)
+            if atom.GetSymbol() != 'C':
+                continue
+            # 手性碳代理指标: 连接 ≥3 个不同的重原子邻居 (含环内 + 环外)
+            # Chiral carbon proxy: ≥3 distinct heavy-atom neighbors (in-ring + exocyclic)
+            heavyNeighbors = [n for n in atom.GetNeighbors() if n.GetAtomicNum() > 1]
+            if len(heavyNeighbors) >= 3:
+                # 进一步检查: 至少有一个环外杂原子 (O/N/S) 邻居
+                # Further check: at least 1 exocyclic heteroatom neighbor
+                hasExoHetero = any(
+                    n.GetIdx() not in ring_set_local and n.GetAtomicNum() in (7, 8, 16)
+                    for n in heavyNeighbors
+                )
+                if hasExoHetero:
+                    chiralRingCarbons += 1
+        if chiralRingCarbons < 2:
+            continue
+
+        # === 糖键连方式约束 (Glycosidic Linkage Type Constraint) ===
+        # 真正的糖环与外部骨架仅通过以下桥原子类型连接:
+        # C-O-C, C-N-C, C-S-C, C-C (直接碳碳键)
+        # 禁止异常连接如 C-P, C-B, C-Si 等无化学意义的键
+        # Real sugar rings connect to external structures only through: 
+        # C-O-C, C-N-C, C-S-C, or direct C-C bonds.
+        has_invalid_linkage = False
+        for idx in ring:
+            atom = mol.GetAtomWithIdx(idx)
+            if atom.GetSymbol() != 'C':
+                continue
+            for nbr in atom.GetNeighbors():
+                if nbr.GetIdx() in ring_set:
+                    continue
+                sym = nbr.GetSymbol()
+                # 允许 O, N, S, C, H (以及 P 在磷酸酯情况下也允许)
+                # Allow O, N, S, C, H (and P for phosphate esters)
+                if sym not in ('O', 'N', 'S', 'C', 'H', 'P'):
+                    has_invalid_linkage = True
+                    break
+            if has_invalid_linkage:
+                break
+        if has_invalid_linkage:
             continue
             
         valid_rings.append(ring)
@@ -196,14 +378,146 @@ def find_mapped_sugar_units(mol):
         else:
             base_name = identify_result
             anomer_config = "?"
+
+        # === CIP-based α/β 异头构型独立检测 (Independent Anomeric Config Detection) ===
+        # REFERENCE_MOLS 仅含 α 条目 → β 糖无法通过字典匹配获得异头构型
+        # 此处使用 CIP 编码独立推断:
+        # D-系列: C1.CIP == Cref.CIP → α; C1.CIP != Cref.CIP → β
+        # L-系列: 规则相反
+        # Dictionary only has α entries. β sugars always get "?" from dict match.
+        # CIP-based independent detection: for D-sugars, same CIP at C1 & Cref → α, different → β
+        if anomer_config == "?":
+            try:
+                Chem.AssignStereochemistry(mol, cleanIt=True, force=True)
+                c1_atom_chiral = mol.GetAtomWithIdx(anomeric_idx)
+                cref_atom_chiral = mol.GetAtomWithIdx(ref_idx)
+                c1_cip = c1_atom_chiral.GetProp('_CIPCode') if c1_atom_chiral.HasProp('_CIPCode') else None
+                cref_cip = cref_atom_chiral.GetProp('_CIPCode') if cref_atom_chiral.HasProp('_CIPCode') else None
+                if c1_cip and cref_cip:
+                    isLSugar = base_name.startswith("L-")
+                    if isLSugar:
+                        # L-系列: C1 与 Cref CIP 不同 → α; 相同 → β
+                        anomer_config = "a" if c1_cip != cref_cip else "b"
+                    else:
+                        # D-系列及其他: C1 与 Cref CIP 相同 → α; 不同 → β
+                        anomer_config = "a" if c1_cip == cref_cip else "b"
+            except Exception:
+                pass  # 保留 "?" (Keep "?" if CIP assignment fails)
             
+        # === 清除遗留修饰标签 (Strip Legacy Modification Labels) ===
+        # identify_monosaccharide_v2 中的 check_modifications() 使用全分子 SMARTS 匹配
+        # 可能将其他位置的修饰误加给当前糖环. v2.0 直接扫描器是唯一权威.
+        # check_modifications() in identify_monosaccharide_v2 uses whole-molecule SMARTS
+        # matching which can misattribute modifications from other parts of the molecule.
+        # The v2.0 direct scanner is now the sole authority for modification detection.
         if "(" in base_name:
             name = base_name.split("(")[0]
-            seq_mods = [m.strip() for m in base_name.split("(")[1].replace(")", "").split(",")]
         else:
             name = base_name
-            seq_mods = []
-            
+        seq_mods = []  # 清空遗留, 由 v2.0 直接扫描重新填充
+                       # Clear legacy mods; v2.0 direct scanner will repopulate
+
+        # === 直接修饰基团扫描 v2.0 (Direct Modification Scanning v2.0) ===
+        # 扫描糖环碳的外环取代基: O-Me, O-Acyl(精确碳数), Sulfate, Phosphate, NAc, NH2
+        # Scan exocyclic substituents: O-Me, O-Acyl(precise carbon count),
+        # Sulfate (2-hop), Phosphate (2-hop), NAc, NH2
+        ring_set_scan = set(ring)
+        for rIdx in ring:
+            rAtom = mol.GetAtomWithIdx(rIdx)
+            if rAtom.GetSymbol() != 'C':
+                continue
+            for exoNbr in rAtom.GetNeighbors():
+                exoIdx = exoNbr.GetIdx()
+                if exoIdx in ring_set_scan:
+                    continue
+                exoSym = exoNbr.GetSymbol()
+
+                if exoSym == 'O':
+                    for oNbr in exoNbr.GetNeighbors():
+                        if oNbr.GetIdx() == rIdx:
+                            continue
+
+                        # --- O-CH₃ (O-Methyl) ---
+                        if (oNbr.GetSymbol() == 'C'
+                            and oNbr.GetDegree() == 1
+                            and oNbr.GetTotalNumHs() == 3):
+                            if "O-Me" not in seq_mods:
+                                seq_mods.append("O-Me")
+
+                        # --- O-Acyl (酯键酰基, 精确碳数分类) ---
+                        # O-C(=O)-R: 检查羰基, 然后 BFS 计碳数
+                        # O-Acyl (ester): detect carbonyl, then BFS count carbons
+                        elif oNbr.GetSymbol() == 'C' and oNbr.GetDegree() >= 2:
+                            hasCarbonyl = any(
+                                mol.GetBondBetweenAtoms(oNbr.GetIdx(), acNbr.GetIdx()).GetBondTypeAsDouble() == 2.0
+                                for acNbr in oNbr.GetNeighbors()
+                                if acNbr.GetSymbol() == 'O' and acNbr.GetIdx() != exoIdx
+                                and mol.GetBondBetweenAtoms(oNbr.GetIdx(), acNbr.GetIdx()) is not None
+                            )
+                            if hasCarbonyl:
+                                acylLabel = _classifyAcylGroup(mol, oNbr.GetIdx(), exoIdx)
+                                if acylLabel not in seq_mods:
+                                    seq_mods.append(acylLabel)
+
+                        # --- Sulfate: O-S(=O)(=O)-OH (二级邻居检测) ---
+                        # Sulfate: Ring-C → O → S(=O)₂(OH) (two-hop detection)
+                        elif oNbr.GetSymbol() == 'S':
+                            doubleBondO = 0
+                            for sNbr in oNbr.GetNeighbors():
+                                if sNbr.GetIdx() == exoIdx:
+                                    continue
+                                sBond = mol.GetBondBetweenAtoms(oNbr.GetIdx(), sNbr.GetIdx())
+                                if sNbr.GetSymbol() == 'O' and sBond:
+                                    if sBond.GetBondTypeAsDouble() == 2.0:
+                                        doubleBondO += 1
+                            if doubleBondO >= 2:
+                                if "Sulfate" not in seq_mods:
+                                    seq_mods.append("Sulfate")
+
+                        # --- Phosphate: O-P(=O)(OH)(OH) (二级邻居检测) ---
+                        # Phosphate: Ring-C → O → P(=O)(OH)₂ (two-hop detection)
+                        elif oNbr.GetSymbol() == 'P':
+                            doubleBondO_P = 0
+                            for pNbr in oNbr.GetNeighbors():
+                                if pNbr.GetIdx() == exoIdx:
+                                    continue
+                                pBond = mol.GetBondBetweenAtoms(oNbr.GetIdx(), pNbr.GetIdx())
+                                if pNbr.GetSymbol() == 'O' and pBond:
+                                    if pBond.GetBondTypeAsDouble() == 2.0:
+                                        doubleBondO_P += 1
+                            if doubleBondO_P >= 1:
+                                if "Phosphate" not in seq_mods:
+                                    seq_mods.append("Phosphate")
+
+                elif exoSym == 'N':
+                    # 检查 NAc: N-C(=O)-CH₃
+                    # Check for N-Acetyl: N-C(=O)-CH₃
+                    isNAc = False
+                    for nNbr in exoNbr.GetNeighbors():
+                        if nNbr.GetIdx() == rIdx:
+                            continue
+                        if nNbr.GetSymbol() == 'C':
+                            hasCarbonylN = False
+                            hasMethylN = False
+                            for nacNbr in nNbr.GetNeighbors():
+                                if nacNbr.GetIdx() == exoIdx:
+                                    continue
+                                bond = mol.GetBondBetweenAtoms(nNbr.GetIdx(), nacNbr.GetIdx())
+                                if nacNbr.GetSymbol() == 'O' and bond and bond.GetBondTypeAsDouble() == 2.0:
+                                    hasCarbonylN = True
+                                if (nacNbr.GetSymbol() == 'C'
+                                    and nacNbr.GetDegree() == 1
+                                    and nacNbr.GetTotalNumHs() == 3):
+                                    hasMethylN = True
+                            if hasCarbonylN and hasMethylN:
+                                isNAc = True
+                    if isNAc and "NAc" not in seq_mods:
+                        seq_mods.append("NAc")
+                    elif not isNAc:
+                        # 游离氨基 (Free amino): N 未被乙酰化
+                        if exoNbr.GetTotalNumHs() >= 2 and "NH2" not in seq_mods:
+                            seq_mods.append("NH2")
+
         final_mods = sorted(list(set(seq_mods)))
             
         matched_units.append({
@@ -574,11 +888,12 @@ def classify_sugar_parts(mol):
             
             # CLASSIFICATION LOGIC
             branch_size = len(branch)
-            # Threshold: 15 atoms. 
+            # 阈值: 10 原子 — 与 phase7_visualizer.py 的 minAglyconHeavyAtoms=10 保持一致
+            # Threshold: 10 atoms — unified with minAglyconHeavyAtoms=10 in phase7_visualizer.py
             # E.g. Acetyl (C2H3O) ~ 4 heavy atoms. 
-            # Caffeoyl (C9H7O3) ~ 12 heavy atoms.
-            # Aglycone usually Steroid (C17+) or Triterpene (C30+).
-            MAX_SUBSTITUENT_SIZE = 15 
+            # Caffeoyl (C9H7O3) ~ 12 heavy atoms → now classified as Aglycone.
+            # Long Carbon chains (>10 atoms) → definitely Aglycone.
+            MAX_SUBSTITUENT_SIZE = 10
             
             if is_linkage:
                 # If it connects two sugars, it acts as a bridge.
@@ -702,51 +1017,22 @@ def strict_classify_sugar_parts(mol):
 def strict_cleavage(mol):
     """
     Phase 2 Core Pipeline cleavage.
-    Breaks bonds between Aglycan and Glycan Parts and uses Dummy Atom (*) to protect topology.
+    Breaks bonds between Aglycan and Glycan Parts and uses Dummy Atom [14*], [15*] to protect topology.
     Returns: (aglycan_smiles_str, glycan_smiles_str, is_false_positive_bool)
     """
-    class_dict, is_fp = strict_classify_sugar_parts(mol)
-    if is_fp:
+    if not mol:
         return "", "", True
         
-    aglycone_indices = class_dict['aglycone_atoms']
-    sugar_part_indices = class_dict['sugar_ring_atoms'].union(class_dict['sugar_substituent_atoms']).union(class_dict['all_sugar_framework_atoms'])
-    
-    bonds_to_break = []
-    for bond in mol.GetBonds():
-        a1 = bond.GetBeginAtomIdx()
-        a2 = bond.GetEndAtomIdx()
-        if (a1 in aglycone_indices and a2 in sugar_part_indices) or \
-           (a2 in aglycone_indices and a1 in sugar_part_indices):
-            bonds_to_break.append(bond.GetIdx())
-            
-    if not bonds_to_break:
-        if not aglycone_indices: return "", Chem.MolToSmiles(mol), False
-        if not sugar_part_indices: return Chem.MolToSmiles(mol), "", False
-        
     try:
-        # Generate dummy markers (*) at broken connections
-        frag_split = Chem.FragmentOnBonds(mol, bonds_to_break, addDummies=True) # default adds *
-        frags_indices = list(Chem.GetMolFrags(frag_split))
+        matched_units = find_mapped_sugar_units(mol)
         
-        ag_combined = []
-        sug_combined = []
+        from lib.cleavage_engine import cleave_glycan_aglycan
+        glycan_smiles, aglycan_smiles = cleave_glycan_aglycan(mol, matched_units)
         
-        # We need to map the original indices to the new split fragments.
-        # FragmentOnBonds adds dummy atoms which will have new indices > mol.GetNumAtoms().
-        # So we check if ANY of the original indices match our sub-parts to classify the fragment.
-        
-        for indices in frags_indices:
-            # Check for intersection with original indices
-            if any(idx in aglycone_indices for idx in indices if idx < mol.GetNumAtoms()):
-                ag_combined.extend(indices)
-            elif any(idx in sugar_part_indices for idx in indices if idx < mol.GetNumAtoms()):
-                sug_combined.extend(indices)
-                
-        aglycone_smiles = Chem.MolFragmentToSmiles(frag_split, atomsToUse=ag_combined, isomericSmiles=True) if ag_combined else ""
-        glycan_smiles = Chem.MolFragmentToSmiles(frag_split, atomsToUse=sug_combined, isomericSmiles=True) if sug_combined else ""
-        
-        return aglycone_smiles, glycan_smiles, False
+        if glycan_smiles is None and aglycan_smiles is None:
+            return "", "", True
+            
+        return aglycan_smiles, glycan_smiles, False
         
     except Exception as e:
         print(f"Strict cleavage error: {e}")

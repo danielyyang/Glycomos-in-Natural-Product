@@ -91,7 +91,7 @@ class StructureVisualizer:
                 elif idx in all_sugar_framework_atoms and idx not in sugar_ring_atoms:
                     highlight_atom_colors[idx] = (1.0, 0.5, 0.5) # Red for exocyclic generic framework
                 elif idx in amino_acid_atoms:
-                    highlight_atom_colors[idx] = (0.0, 0.6, 0.0) # Dark Green for Amino Acids
+                    highlight_atom_colors[idx] = (0.6, 1.0, 0.6) # Light Green for Amino Acids (统一与核苷酸相同浅绿色)
                 elif idx in sugar_substituent_atoms:
                     highlight_atom_colors[idx] = (1.0, 1.0, 0.4) # Yellow for other Small Molecule Linkers
                 elif idx in aglycone_atoms:

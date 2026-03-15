@@ -82,6 +82,81 @@ def fill_classification(df):
     print(f"Successfully inferred classes for {changes} rows.")
     return df, imputed_cells
 
+
+def fill_np_classifier(df):
+    """
+    填补空缺的 np_classifier_superclass 列。
+    策略与 fill_classification 相同：InChIKey Block-1 匹配 + Aglycan Morgan FP Tanimoto ≥ 0.8。
+    Fills empty 'np_classifier_superclass' using the same strategy as fill_classification:
+    1. InChIKey Block-1 match with a classified row.
+    2. Aglycan Morgan FP Tanimoto similarity >= 0.8.
+    Returns (df, imputed_cells_set)
+    """
+    imputed_cells = set()
+
+    if 'np_classifier_superclass' not in df.columns:
+        print("Column 'np_classifier_superclass' not found. Skipping.")
+        return df, imputed_cells
+
+    # 标准化空值标记 (Standardize empty markers)
+    df['np_classifier_superclass'] = df['np_classifier_superclass'].fillna('No Classified')
+    df.loc[df['np_classifier_superclass'].str.strip() == '', 'np_classifier_superclass'] = 'No Classified'
+
+    classified_df = df[df['np_classifier_superclass'] != 'No Classified'].copy()
+    unclassified_df = df[df['np_classifier_superclass'] == 'No Classified'].copy()
+
+    if unclassified_df.empty or classified_df.empty:
+        return df, imputed_cells
+
+    print(f"Attempting to fill np_classifier_superclass for {len(unclassified_df)} rows...")
+
+    # 预计算 InChIKey Block-1 和分子指纹 (Pre-compute InChIKey blocks and fingerprints)
+    classified_df['inchikey_block1'] = classified_df['standard_inchi_key'].astype(str).str[:14]
+
+    def extractPrimaryAglycan(s):
+        if pd.isna(s) or not str(s).strip(): return ""
+        return str(s).split('|')[0].strip()
+
+    classified_df['primary_aglycan'] = classified_df['Aglycan_SMILE_ALL'].apply(extractPrimaryAglycan)
+    tqdm.pandas(desc="Computing NP Classifier FPs")
+    classifiedFps = classified_df['primary_aglycan'].progress_apply(get_morgan_fp)
+    classified_df['fp'] = classifiedFps
+    validClassified = classified_df.dropna(subset=['fp']).copy()
+
+    changes = 0
+    for idx, row in tqdm(unclassified_df.iterrows(), total=len(unclassified_df), desc="Filling NP Classifier"):
+        # 策略 1: InChIKey Block-1 匹配 (Strategy 1: InChIKey Block-1 Match)
+        ikey = str(row.get('standard_inchi_key', ''))[:14]
+        match = classified_df[classified_df['inchikey_block1'] == ikey]
+        if not match.empty:
+            inferredClass = match.iloc[0]['np_classifier_superclass']
+            df.at[idx, 'np_classifier_superclass'] = inferredClass
+            imputed_cells.add((idx, 'np_classifier_superclass'))
+            changes += 1
+            continue
+
+        # 策略 2: Tanimoto 相似度 >= 0.8 (Strategy 2: Tanimoto Similarity >= 0.8)
+        primaryAg = extractPrimaryAglycan(row.get('Aglycan_SMILE_ALL'))
+        if primaryAg:
+            fp1 = get_morgan_fp(primaryAg)
+            if fp1:
+                bestSim = 0
+                bestClass = None
+                for cIdx, cRow in validClassified.iterrows():
+                    fp2 = cRow['fp']
+                    sim = DataStructs.TanimotoSimilarity(fp1, fp2)
+                    if sim > bestSim:
+                        bestSim = sim
+                        bestClass = cRow['np_classifier_superclass']
+
+                if bestSim >= 0.8 and bestClass:
+                    df.at[idx, 'np_classifier_superclass'] = bestClass
+                    imputed_cells.add((idx, 'np_classifier_superclass'))
+                    changes += 1
+
+    print(f"Successfully inferred np_classifier_superclass for {changes} rows.")
+    return df, imputed_cells
+
 # --- Online Taxonomy Imputation ---
 TAXONOMY_DICT = {
     "Arabidopsis thaliana": "Brassicaceae",
@@ -315,7 +390,7 @@ def fill_taxonomy_online(df):
         query_name = compound_name if compound_name and compound_name != 'nan' else iupac
         
         # 1. Fill Organism
-        if not org or org == 'nan' or org == 'Not Result':
+        if not org or org == 'nan' or org == 'NULL':
             inferred_org = None
             
             # Tier 1: COCONUT exact InChIKey match
@@ -363,8 +438,8 @@ def fill_taxonomy_online(df):
                         changes_fam += 1
                         
     # Replace any remaining blanks with 'Not Result'
-    df['organisms'] = df['organisms'].replace(['', 'nan', None], 'Not Result').fillna('Not Result')
-    df['Family'] = df['Family'].replace(['', 'nan', None], 'Not Result').fillna('Not Result')
+    df['organisms'] = df['organisms'].replace(['', 'nan', None], 'NULL').fillna('NULL')
+    df['Family'] = df['Family'].replace(['', 'nan', None], 'NULL').fillna('NULL')
     
     # Standardize 'Not Result' flag in imputed cells if we modified them just now?
     # No need to flag 'Not Result' as a successful imputation, leave it as is so it doesn't color green/red incorrectly.
