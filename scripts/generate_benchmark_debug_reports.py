@@ -292,48 +292,40 @@ def generateBenchmarkReport(entries: list, title: str, outputPath: str) -> dict:
 
 
 def main():
-    # === Tier A (50 mol) ===
-    print("=" * 70)
-    print("  Generating Tier A Debug Report (50 mol)")
-    print("=" * 70)
-    with open(r"d:\Glycan_Database\data\benchmark_200.json", "r", encoding="utf-8") as f:
-        tierA = json.load(f)
-    outA = os.path.join(REPORT_DIR, "TierA_50_debug_report.html")
-    statsA = generateBenchmarkReport(tierA, "GlycoNP Tier A Debug Report (50 mol)", outA)
-    print(f"  Tier A: {statsA['pass']}/{statsA['total']} PASS ({statsA['pass_rate']:.1f}%)")
-    print(f"  Avg latency: {statsA['avg_latency_ms']:.1f}ms")
-    print(f"  Output: {outA}")
+    """生成 Unified Benchmark Debug Report。
+    Generate the Unified Benchmark Debug Report using benchmark_unified.json.
+    """
+    dataDir = os.path.join(r"d:\Glycan_Database", "data")
+    unifiedPath = os.path.join(dataDir, "benchmark_unified.json")
 
-    # === Benchmark 150 ===
-    print("\n" + "=" * 70)
-    print("  Generating Benchmark 150 Debug Report (147 mol)")
-    print("=" * 70)
-    with open(r"d:\Glycan_Database\data\benchmark_150.json", "r", encoding="utf-8") as f:
-        bench150 = json.load(f)
-    out150 = os.path.join(REPORT_DIR, "Benchmark150_debug_report.html")
-    stats150 = generateBenchmarkReport(bench150, "GlycoNP Benchmark 150 Debug Report", out150)
-    print(f"  Bench150: {stats150['pass']}/{stats150['total']} PASS ({stats150['pass_rate']:.1f}%)")
-    print(f"  Avg latency: {stats150['avg_latency_ms']:.1f}ms")
-    print(f"  Output: {out150}")
+    if not os.path.exists(unifiedPath):
+        print(f"ERROR: Benchmark file not found: {unifiedPath}")
+        return
 
-    # === Unified Benchmark (226 mol) ===
-    unifiedPath = r"d:\Glycan_Database\data\benchmark_unified.json"
-    if os.path.exists(unifiedPath):
-        print("\n" + "=" * 70)
-        print("  Generating Unified Benchmark Debug Report (226 mol)")
-        print("=" * 70)
-        with open(unifiedPath, "r", encoding="utf-8") as f:
-            unified = json.load(f)
-        outU = os.path.join(REPORT_DIR, "Unified_benchmark_debug_report.html")
-        statsU = generateBenchmarkReport(unified, "GlycoNP Unified Benchmark Debug Report (226 mol)", outU)
-        print(f"  Unified: {statsU['pass']}/{statsU['total']} PASS ({statsU['pass_rate']:.1f}%)")
-        print(f"  Avg latency: {statsU['avg_latency_ms']:.1f}ms")
-        print(f"  Output: {outU}")
+    print("=" * 70)
+    print("  Generating Unified Benchmark Debug Report")
+    print("=" * 70)
+
+    with open(unifiedPath, "r", encoding="utf-8") as f:
+        unified = json.load(f)
+
+    print(f"  Loaded {len(unified)} entries from benchmark_unified.json")
+
+    outU = os.path.join(REPORT_DIR, "Unified_benchmark_debug_report.html")
+    statsU = generateBenchmarkReport(
+        unified,
+        f"GlycoNP Unified Benchmark Debug Report ({len(unified)} mol)",
+        outU,
+    )
+    print(f"\n  Unified: {statsU['pass']}/{statsU['total']} PASS ({statsU['pass_rate']:.1f}%)")
+    print(f"  Avg latency: {statsU['avg_latency_ms']:.1f}ms")
+    print(f"  Output: {outU}")
 
     print("\n" + "=" * 70)
-    print("  ALL REPORTS GENERATED!")
+    print("  REPORT GENERATED!")
     print("=" * 70)
 
 
 if __name__ == "__main__":
     main()
+

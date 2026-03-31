@@ -248,17 +248,22 @@ def detectAllGlycosidicBonds(mol, sugarUnits):
             if targetType != "Aglycone":
                 continue  # 这是 sugar-sugar 键, 跳过
 
-            # ── 修饰基团过滤: 如果"Aglycone"片段很小(≤12 重原子), 则是修饰而非苷元 ──
-            # Modification filter: if the "Aglycone" fragment is small (≤12 heavy
-            # atoms), it is a modification group (Bz, Ac, sulfate…), not a true
-            # aglycone.  True aglycones (terpenoids, flavonoids, steroids) have
-            # ≥15 heavy atoms.
-            # NOTE: We use ring_atoms only for the stop-set because allSugarAtoms
-            # includes exocyclic neighbors (bridge O) which blocks the BFS.
+            # ── 修饰基团过滤: 如果"Aglycone"片段很小(≤3 重原子), 则是修饰而非苷元 ──
+            # Modification filter: if the "Aglycone" fragment is tiny (≤3 heavy
+            # atoms), it is a modification group (Ac, sulfate…), not a true aglycone.
+            # 设计修正: 旧版 O-linked 阈值=12 过于激进, 导致多糖链分子中
+            # 第3条链的 reducing-end 糖被误过滤 (BFS 很快碰到其他糖环而停,
+            # fragSize 被低估)。现统一为 3, 仅过滤真正微小的修饰 (-OAc: 4, -SO₃: 4)。
+            # Design fix: Old O-linked threshold=12 was too aggressive in multi-chain
+            # molecules — BFS from C1 quickly hits other sugar rings, underestimating
+            # fragSize. Now unified to 3, only filtering truly tiny modifications.
+            # NOTE: 仅用 ring_atoms 作为停止集, 不包含 position_map (C6等环外碳)
+            # 以避免 C6 阻断 BFS 路径。
+            # NOTE: Only ring_atoms in stop set (excludes position_map/C6 exo carbons)
+            # to prevent C6 from blocking BFS path to aglycone.
             sugarRingOnly = set()
             for su in sugarUnits:
                 sugarRingOnly.update(su.get("ring_atoms", []))
-                sugarRingOnly.update(su.get("position_map", {}).keys())
 
             fragSize = 0
             visited = {c1Idx}  # 不回溯到 C1
@@ -269,16 +274,13 @@ def detectAllGlycosidicBonds(mol, sugarUnits):
                     continue
                 visited.add(cur)
                 if cur in sugarRingOnly and cur != nIdx:
-                    continue  # 碰到糖环/骨架原子就停, 但桥原子本身不停
+                    continue  # 碰到糖环原子就停, 但桥原子本身不停
                 fragSize += 1
                 for adj in mol.GetAtomWithIdx(cur).GetNeighbors():
                     if adj.GetIdx() not in visited:
                         stack.append(adj.GetIdx())
-            # Bug 2 修复: S/N/C-linked 糖苷键的苷元通常较小 (如 Sinigrin 仅 ~7 原子),
-            # 使用更宽松的阈值以避免误过滤。O-linked 保留原阈值。
-            # Bug 2 fix: S/N/C-linked aglycones are often small (e.g. Sinigrin ~7 atoms),
-            # use a relaxed threshold to avoid false filtering. O-linked keeps original.
-            sizeThreshold = 3 if linkType in ("S", "N", "C") else 12
+            # 统一阈值: 所有键类型均为 3 (Unified threshold for all bond types)
+            sizeThreshold = 3
             if fragSize <= sizeThreshold:
                 continue  # 小片段 → 修饰基团, 不是 aglycone
 
@@ -839,19 +841,27 @@ def molToHighlightedBase64Png(smi, size=(380, 250)):
                         bfsQueue.append(nIdx)
             components.append(cc)
 
-        # 最大连通分量 = 苷元, 其余 = 修饰 (除非纯糖分子)
-        # Largest CC = aglycone, rest = mods (unless pure sugar molecule)
+        # 修正: 统一阈值判定修饰/苷元 (Fix: unified threshold for mod/aglycone)
+        # 设计意图: 与 classify_sugar_parts() 中的 MAX_SUBSTITUENT_SIZE=10 保持一致。
+        # 只有 ≤10 重原子的连通分量才标为修饰(黄色), 其余全部标为苷元(蓝色)。
+        # 旧策略"最大CC=苷元"会导致 Caffeoyl(12原子) 等中等大小片段被误标为修饰。
+        # Design: Unified with MAX_SUBSTITUENT_SIZE=10 in classify_sugar_parts().
+        # Only CCs with ≤10 heavy atoms are modifications (YELLOW), rest = aglycone (BLUE).
+        # Old 'largest CC = aglycone' strategy misclassified Caffeoyl (12 atoms) as mod.
+        MAX_HIGHLIGHT_SUBSTITUENT_SIZE = 10
         isPureSugar = _checkPureSugarMolecule(mol)
 
         if components and not isPureSugar:
-            # 正常: 有苷元 → 最大分量蓝色, 其余黄色
-            components.sort(key=len, reverse=True)
-            aglyconeAtoms = components[0]
+            aglyconeAtoms = set()
             modAtoms = set()
-            for cc in components[1:]:
-                modAtoms |= cc
+            for cc in components:
+                if len(cc) <= MAX_HIGHLIGHT_SUBSTITUENT_SIZE:
+                    modAtoms |= cc    # 小片段 → 修饰(黄色) (Small fragment → mod/YELLOW)
+                else:
+                    aglyconeAtoms |= cc  # 大片段 → 苷元(蓝色) (Large fragment → aglycone/BLUE)
         elif components and isPureSugar:
             # 纯糖: 所有非糖原子都是修饰 (黄色), 无苷元
+            # Pure sugar: all non-sugar atoms are modifications (YELLOW), no aglycone
             aglyconeAtoms = set()
             modAtoms = set()
             for cc in components:

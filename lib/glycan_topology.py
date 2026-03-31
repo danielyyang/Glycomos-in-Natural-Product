@@ -28,6 +28,15 @@ def strip_and_record_modifications(sugar_mol):
             
     return modifications
 
+# 酰基修饰的最大碳数安全阈值 (Max acyl carbon count safety threshold)
+# 设计意图: 天然产物中最大的已知酰基修饰是芥子酰基 (Sinapoyl, 11C)。
+# 超过 15C 的酯键连接片段几乎 100% 是苷元 (三萜 ~30C, 黄酮 ~15C+),
+# 不应被标记为修饰基团。BFS 碳计数超过此阈值时返回 None。
+# Design: Largest known acyl modification in NP is Sinapoyl (11C).
+# Ester-linked fragments >15C are almost certainly aglycones (triterpenoids ~30C,
+# flavonoids ~15C+), NOT modifications. Returns None when BFS exceeds this.
+MAX_ACYL_CARBON_COUNT = 15
+
 def _classifyAcylGroup(mol, carbonylCarbonIdx, esterOxygenIdx):
     """
     从酯键/酰胺键的羰基碳出发, BFS 沿 C-C 键计数碳原子数 → 精确分类酰基。
@@ -38,13 +47,19 @@ def _classifyAcylGroup(mol, carbonylCarbonIdx, esterOxygenIdx):
     设计意图: 区分乙酰基 (2C), 丙酰 (3C), 丁酰 (4C), 异戊酰 (5C), 己酰 (6C)
     Design: distinguish Ac(2C), Propionyl(3C), Butyryl(4C), Isovaleryl(5C), Hexanoyl(6C)
 
+    安全阈值 (Safety Threshold):
+    碳数超过 MAX_ACYL_CARBON_COUNT (15) 时返回 None, 表示该酯键连接的是苷元
+    而非修饰基团。调用方应检查 None 并跳过该酯键。
+    Returns None when carbon count exceeds MAX_ACYL_CARBON_COUNT, indicating the
+    ester-linked fragment is an aglycone, not a modification.
+
     Args:
         mol: RDKit 分子对象
         carbonylCarbonIdx: 羰基碳的原子索引 (atom index of carbonyl carbon C(=O))
         esterOxygenIdx: 酯氧的原子索引 (atom index of ester oxygen, used as barrier)
 
     Returns:
-        str: 修饰标签 (e.g. "O-Ac", "Propionyl", "Butyryl", "Isovaleryl", "Hexanoyl")
+        str or None: 修饰标签, 或 None 表示非修饰 (mod label, or None if not a modification)
     """
     visited = {esterOxygenIdx}  # 酯氧作为屏障, 不向回走 (ester O acts as barrier)
     queue = [carbonylCarbonIdx]
@@ -69,6 +84,14 @@ def _classifyAcylGroup(mol, carbonylCarbonIdx, esterOxygenIdx):
             if nbr.GetAtomicNum() != 6:
                 continue
             queue.append(nIdx)
+
+    # ── 苷元安全阈值: 碳数超限 → 返回 None (Aglycone safety threshold) ──
+    # 设计意图: 天然产物最大酰基修饰 = Sinapoyl (11C)。
+    # 超过 MAX_ACYL_CARBON_COUNT 的片段是苷元, 不是修饰基团。
+    # Design: Largest NP acyl = Sinapoyl (11C).
+    # Fragments exceeding MAX_ACYL_CARBON_COUNT are aglycones, NOT modifications.
+    if carbonCount > MAX_ACYL_CARBON_COUNT:
+        return None  # 信号: 这是苷元, 不是修饰 (Signal: aglycone, not modification)
 
     # Bug 1 修复: 芳香性优先判断 — 芳香碳 ≥ 5 则为芳香酰基
     # Bug 1 fix: Aromaticity-first classification.
@@ -523,6 +546,18 @@ def find_mapped_sugar_units(mol):
                     # D-系列及其他: C1 与 Cref CIP 相同 → α; 不同 → β
                     # D-sugar: C1 CIP == Cref CIP → α; different → β
                     anomer_config = "a" if c1_cip == cref_cip else "b"
+            elif c1_cip and not cref_cip:
+                # Fallback: Cref CIP 不可用时, 直接用 C1 CIP 推断
+                # 此逻辑与 detectAllGlycosidicBonds() 保持一致:
+                #   D-糖: S → α, R → β; L-糖: 反转
+                # Fallback: When Cref CIP unavailable, infer from C1 CIP directly.
+                # Consistent with detectAllGlycosidicBonds():
+                #   D-sugar: S → α, R → β; L-sugar: reversed
+                isLSugar = base_name.startswith("L-")
+                if isLSugar:
+                    anomer_config = "a" if c1_cip == "R" else "b"
+                else:
+                    anomer_config = "a" if c1_cip == "S" else "b"
         except Exception:
             pass  # 保留字典返回值 (Keep dict value as fallback)
             
@@ -578,7 +613,9 @@ def find_mapped_sugar_units(mol):
                             )
                             if hasCarbonyl:
                                 acylLabel = _classifyAcylGroup(mol, oNbr.GetIdx(), exoIdx)
-                                if acylLabel not in seq_mods:
+                                # 安全阈值: None 表示酯键连接的是苷元, 不是修饰
+                                # Safety: None means ester connects to aglycone, not modification
+                                if acylLabel is not None and acylLabel not in seq_mods:
                                     seq_mods.append(acylLabel)
 
                         # --- Sulfate: O-S(=O)(=O)-OH (二级邻居检测) ---
@@ -639,6 +676,43 @@ def find_mapped_sugar_units(mol):
                         # 游离氨基 (Free amino): N 未被乙酰化
                         if exoNbr.GetTotalNumHs() >= 2 and "NH2" not in seq_mods:
                             seq_mods.append("NH2")
+
+                # --- C6/C7 间接修饰检测 (Indirect Modification via Exocyclic Carbon) ---
+                # 设计意图: C6-Sulfate, C6-Phosphate 等通过环外碳间接连接的修饰
+                # 路径: Ring-C5 → C6 → O → S/P 需要 3-hop 检测, v2.0 原版只有 2-hop
+                # Design: C6-Sulfate/Phosphate attached via exocyclic carbon
+                # Path: Ring-C5 → C6 → O → S/P requires 3-hop; v2.0 only had 2-hop
+                elif exoSym == 'C' and exoIdx not in ring_set_scan:
+                    for c6Nbr in exoNbr.GetNeighbors():
+                        if c6Nbr.GetIdx() == rIdx:
+                            continue
+                        c6NbrSym = c6Nbr.GetSymbol()
+                        if c6NbrSym == 'O':
+                            # C6 → O → S(=O)₂ (Sulfate via C6)
+                            for deepNbr in c6Nbr.GetNeighbors():
+                                if deepNbr.GetIdx() == exoIdx:
+                                    continue
+                                if deepNbr.GetSymbol() == 'S':
+                                    dblO_c6 = sum(
+                                        1 for sn in deepNbr.GetNeighbors()
+                                        if sn.GetSymbol() == 'O'
+                                        and mol.GetBondBetweenAtoms(
+                                            deepNbr.GetIdx(), sn.GetIdx()
+                                        ).GetBondTypeAsDouble() == 2.0
+                                    )
+                                    if dblO_c6 >= 2 and "Sulfate" not in seq_mods:
+                                        seq_mods.append("Sulfate")
+                                # C6 → O → P(=O)(OH)₂ (Phosphate via C6)
+                                elif deepNbr.GetSymbol() == 'P':
+                                    dblO_p6 = sum(
+                                        1 for pn in deepNbr.GetNeighbors()
+                                        if pn.GetSymbol() == 'O'
+                                        and mol.GetBondBetweenAtoms(
+                                            deepNbr.GetIdx(), pn.GetIdx()
+                                        ).GetBondTypeAsDouble() == 2.0
+                                    )
+                                    if dblO_p6 >= 1 and "Phosphate" not in seq_mods:
+                                        seq_mods.append("Phosphate")
 
         final_mods = sorted(list(set(seq_mods)))
             
@@ -844,7 +918,12 @@ def find_glycosidic_linkages(mol, units):
                             pos_acc_num = u2.get('position_map', {}).get(acceptor_idx, 6 if acceptor_idx not in u2['ring_atoms'] else "?")
                             
                             # 动态生成受体后缀（非还原糖带上 b2/a2 等）
-                            if is_anomeric(mol, acceptor_idx):
+                            # 修正: 仅当 position_map 确认受体位于 C1 时才视为异头碳
+                            # Fix: only treat acceptor as anomeric when position_map
+                            # confirms it's C1, not by is_anomeric() which can false-
+                            # positive on branched sugars (D-Api, D-Xyl) with ≥2 O on non-C1
+                            acceptorIsAnomeric = (pos_acc_num == 1 or pos_acc_num == "1")
+                            if acceptorIsAnomeric:
                                 acc_config = u2.get('anomeric_config', '?')
                                 pos_acceptor = f"{acc_config}{pos_acc_num}"
                             else:
