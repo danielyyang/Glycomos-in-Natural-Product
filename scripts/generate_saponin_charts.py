@@ -27,7 +27,7 @@ warnings.filterwarnings("ignore")
 
 # -- Paths ----------------------------------------------------------------
 BASE_DIR = Path(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
-CSV_PATH = BASE_DIR / "reports" / "GlycoNP_Saponin_DB_v13.csv"
+CSV_PATH = BASE_DIR / "reports" / "GlycoNP_Saponin_DB.csv"
 OUT_DIR = BASE_DIR / "reports" / "saponin_figures"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 

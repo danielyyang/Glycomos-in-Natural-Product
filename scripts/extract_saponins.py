@@ -16,14 +16,14 @@ from rdkit.Chem import AllChem
 from rdkit.Chem.Draw import rdMolDraw2D
 from tqdm import tqdm
 
-# Reuse the exact same rendering utilities from run_v12_full_pipeline.py
-from scripts.run_v12_full_pipeline import (
+from lib.pipeline_utils import (
     molToHighlightedBase64Png, molToBase64Png,
-    detectAllGlycosidicBonds, find_mapped_sugar_units,
+    detectAllGlycosidicBonds
 )
+from lib.glycan_topology import find_mapped_sugar_units
 
 REPORT_DIR = os.path.join(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")), "reports")
-SAPONIN_CSV = os.path.join(REPORT_DIR, "GlycoNP_Saponin_DB_v13.csv")
+SAPONIN_CSV = os.path.join(REPORT_DIR, "GlycoNP_Saponin_DB.csv")
 
 
 def buildSaponinHtmlReport(df: pd.DataFrame, max_rows: int = 1000) -> str:
@@ -39,7 +39,7 @@ def buildSaponinHtmlReport(df: pd.DataFrame, max_rows: int = 1000) -> str:
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>GlycoNP Saponin Report v13</title>
+<title>GlycoNP Saponin Report</title>
 <style>
   * {{ margin:0; padding:0; box-sizing:border-box; }}
   body {{ font-family:'Segoe UI',system-ui,sans-serif; background:#0a0e1a; color:#e0e0e0; padding:8px; }}
@@ -79,7 +79,7 @@ def buildSaponinHtmlReport(df: pd.DataFrame, max_rows: int = 1000) -> str:
 </style>
 </head>
 <body>
-<h1>GlycoNP Saponin Report v13</h1>
+<h1>GlycoNP Saponin Report</h1>
 <p class="meta">Total Saponins in Database: {len(df):,} | Showing first {min(max_rows, len(df)):,} rows | Generated: {time.strftime('%Y-%m-%d %H:%M')}</p>
 <table>
 <colgroup>
@@ -239,8 +239,8 @@ def buildSaponinHtmlReport(df: pd.DataFrame, max_rows: int = 1000) -> str:
 
 
 if __name__ == "__main__":
-    print("Loading V13 Pruned dataset...")
-    dfPruned = pd.read_csv(os.path.join(REPORT_DIR, "GlycoNP_Deep_Enriched_v13_Pruned.csv"), low_memory=False)
+    print("Loading Full Unified dataset...")
+    dfPruned = pd.read_csv(os.path.join(REPORT_DIR, "GlycoNP_Deep_Enriched_Final.csv"), low_memory=False)
 
     # Filter Saponins across all three classification columns
     mask = (

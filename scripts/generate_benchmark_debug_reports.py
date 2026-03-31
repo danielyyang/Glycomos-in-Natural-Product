@@ -23,9 +23,7 @@ from rdkit.Chem.Draw import rdMolDraw2D
 from lib.glycan_topology import find_mapped_sugar_units, get_split_smiles
 from lib.monosaccharide_identifier import identify_monosaccharide_v10, generate_refined_sequence
 
-# 复用 run_v12_full_pipeline.py 的糖苷键检测
-# Reuse glycosidic bond detection from run_v12_full_pipeline.py
-from scripts.run_v12_full_pipeline import (
+from lib.pipeline_utils import (
     molToHighlightedBase64Png, molToBase64Png,
     detectAllGlycosidicBonds, _checkPureSugarMolecule,
 )

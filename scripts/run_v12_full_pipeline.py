@@ -6,6 +6,11 @@ v12.3 修复清单 (Round 3 — All Tasks):
   Task 2: 修复空的 Aglycon_SMILES / 错误的 Glycan_SMILES
   Task 4: 多糖苷键逐一检测 (Multi-bond per-sugar detection)
   All v12.2 fixes preserved
+
+NOTE: 核心函数已迁移到 lib/pipeline_utils.py，此脚本通过 import 保持向后兼容。
+NOTE: Core functions moved to lib/pipeline_utils.py. This script re-exports them
+for backward compatibility with downstream scripts (extract_saponins.py, etc.).
+
 [TEST DATA ONLY]
 """
 import argparse, os, re, sys, time, json, base64, random
@@ -28,32 +33,35 @@ from lib.glycan_topology import (
 )
 from lib.feature_extractor import getTopologyScaffoldSmiles
 
+# === 核心函数从 lib/pipeline_utils.py 导入 (Import core functions from shared library) ===
+# 保持向后兼容: extract_saponins.py, generate_benchmark_debug_reports.py 等
+# 下游脚本仍可 `from scripts.run_v12_full_pipeline import ...`
+# Backward compat: downstream scripts can still import from this module.
+from lib.pipeline_utils import (
+    extractSugarFromName,
+    crossValidateRareSugars,
+    _findAnomericCarbon,
+    detectAllGlycosidicBonds,
+    inferOrganismType,
+    _checkPureSugarMolecule,
+    molToBase64Png,
+    molToHighlightedBase64Png,
+    RARE_SUGARS,
+    NAME_SUGAR_MAP,
+    GENERIC_PAT,
+    GENUS_TO_TYPE,
+    ORGANISM_TYPE_FALLBACK,
+)
+
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 REPORT_DIR = os.path.join(BASE_DIR, "reports")
 INPUT_CSV = os.path.join(REPORT_DIR, "GlycoNP_Deep_Enriched_v12_backup_bond.csv")
 OUTPUT_CSV = os.path.join(REPORT_DIR, "GlycoNP_Deep_Enriched_v12_Final.csv")
 CRITICAL_LOG = os.path.join(REPORT_DIR, "critical_failures.log")
 
-GENERIC_PAT = re.compile(r'\b(Hex|Pen|dHex|HexA|Non|Oct|Hept)\b')
 
-# =====================================================================
-# 罕见糖-名称交叉验证 (Rare Sugar Cross-Validation)
-# =====================================================================
-RARE_SUGARS = {"D-Tal", "L-Tal", "D-All", "L-All", "D-Alt", "L-Alt",
-               "D-Gul", "L-Gul", "D-Ido", "L-Ido", "D-TalN", "L-TalN"}
 
-NAME_SUGAR_MAP = [
-    (re.compile(r'glucuronic|glucuronide|glucuronosyl', re.I), 'D-GlcA'),
-    (re.compile(r'glucosinolat|glucopyranosid|glucosid|glucosyl|glucofuranos|gluco(?:se)?(?![a-z])', re.I), 'D-Glc'),
-    (re.compile(r'galactopyranosid|galactolipid|galactosid|galactosyl|galacto(?:se)?(?![a-z])', re.I), 'D-Gal'),
-    (re.compile(r'mannopyranosid|mannoprotein|mannosid|mannosyl|manno(?:se)?(?![a-z])', re.I), 'D-Man'),
-    (re.compile(r'xylopyranosid|xylosid|xylosyl|xylan|xylo(?:se)?(?![a-z])', re.I), 'D-Xyl'),
-    (re.compile(r'arabinopyranosid|arabinosid|arabinosyl|arabinan|arabino(?:se)?(?![a-z])', re.I), 'L-Ara'),
-    (re.compile(r'rhamnopyranosid|rhamnosid|rhamnosyl|rhamno(?:se)?(?![a-z])', re.I), 'L-Rha'),
-    (re.compile(r'fucopyranosid|fucosid|fucosyl|fucoidan|fuco(?:se)?(?![a-z])', re.I), 'L-Fuc'),
-]
 
-def extractSugarFromName(name, iupacName, synonyms, abstract=None):
     """从名称中提取糖线索 / Extract sugar clue from name fields."""
     textPool = " ".join(filter(None, [
         str(x) if x and str(x) != "nan" else None
