@@ -5,6 +5,65 @@
 
 ---
 
+## 2026-04-05 — Saponin DB 输出增强 + 糖链编辑距离引擎 (Output Enhancement + Glycan TED Engine)
+
+### 专家反馈评估 (Expert Feedback Evaluation)
+- 评估了 5 条合成化学视角的反馈建议, 约 60% 有增量价值
+- 已有 S1-S3/A8/A17 等图表覆盖了约 40% 的建议内容
+- 识别出的核心缺口: 连接感知砌块、苷元碳位热图、糖-糖内部键矩阵、分支度统计
+
+### 新增 E 系列: 合成导向分析 (Synthesis-Oriented Analytics)
+- **文件**: `scripts/generate_saponin_charts_synth.py` (新建)
+- **E1** `E1_linkage_aware_synthons`: Donor-(anomer pos→pos)-Acceptor 四元组 Top 30 频率
+- **E2a/E2b** `E2a_root_sugar_linkage` / `E2b_root_sugar_saponin_type`: 根糖 × 连接元素 / 皂苷类型
+- **E3a/E3b** `E3a_interglycan_linkage_matrix` / `E3b_sugar_pair_frequency`: α/β × Position 热力图 + Top 20 糖对
+- **E4a/E4b** `E4a_branching_degree_dist` / `E4b_branch_point_sugars`: 分支度直方图 + 分支点糖类型
+- **E5** `E5_cis_trans_prevalence`: 1,2-cis (合成难) vs 1,2-trans (合成易) 占比, 基于 Demchenko 2008 规则
+
+### 新增 F 系列: 药学导向分析 (Bioactivity-Oriented Analytics)
+- **文件**: `scripts/generate_saponin_charts_bioact.py` (新建)
+- **F1** `F1_chain_vs_bioactivity`: 糖链长度 × 生物活性类别热图
+- **F2** `F2_mod_vs_pchembl`: 修饰类型 × pChEMBL 箱线图
+- **F3** `F3_sugar_vs_target`: 单糖 × ChEMBL 靶点蛋白热图
+- **F4** `F4_ro5_vs_sugar_count`: Lipinski RO5 违规 × 糖数量堆积柱状图
+- **F5** `F5_qed_by_saponin_type`: QED 类药性 (SD vs TD) 小提琴图
+
+### 新增 G+Q 系列: 化学信息学 + 数据质量 (Cheminformatics + Data Quality)
+- **文件**: `scripts/generate_saponin_charts_cheminf.py` (新建)
+- **G1-G5**: MW×糖数散点, Fsp3×糖数箱线, 脱氧/含氧糖比×物种, 稀有糖×植物科, 复杂度×文献引用
+- **Q1**: 立体信息覆盖率 (CIP-precise vs NLP-rescued vs 2D-generic 饼图)
+- **Q2**: 数据溯源 Sankey (总量 → 有序列/苷元/活性/文献的分流图)
+- **Q3**: 修饰标注完整度 (按物种的修饰注释率)
+- **Bug Fix**: Q2 Sankey 颜色格式 — hex+alpha → `rgba()` 转换
+
+### 新增 lib/glycan_similarity.py: 糖链树编辑距离引擎 (Glycan TED Engine)
+- **算法**: Zhang-Shasha 1989 Tree Edit Distance, O(n1·n2·min(d1,l1)·min(d2,l2))
+- **序列解析器**: 支持线性 (`D-Glc-(b1-4)-L-Rha`) / 分支 (`[D-Qui-(b1-2)]-D-Gal`) / 多链 (`;` 分隔)
+- **三维打分矩阵**:
+  - 节点代价: 完全匹配 0.0 / 差向异构体 0.3 / 氧化态变化 0.6 / D/L 互换 0.4 / 完全不同 1.0
+  - 边代价: 完全匹配 0.0 / 区域异构 0.6 / 异头碳翻转 0.8 / 完全不同 1.0
+  - 权重可调: `ScoringWeights(nodeWeight, edgeWeight, topologyWeight)`
+- **归一化相似度**: [0, 1], 1.0 = 完全相同
+- **批量检索**: `searchSimilar()` 全库 26K 序列 ~2.7s
+- **测试**: `tests/test_glycan_similarity.py` — 25/25 pytest PASS (解析器 7 + 打分 7 + TED 7 + 批量 4)
+
+### 新增 scripts/interactive_similarity.py: TED 交互式 Web 探索器
+- **架构**: Python `http.server` + 嵌入式 HTML/JS 单页应用, 无外部依赖
+- **功能**: 三个滑块实时调整权重, 示例查询一键填充, Top-N 结果带相似度色条
+- **启动**: `python scripts/interactive_similarity.py` → localhost:8765 自动打开
+- **导出**: HTML 页面同步输出到 `reports/saponin_figures/interactive_ted_explorer.html`
+
+### 主管线集成
+- **文件**: `scripts/generate_saponin_charts.py` (修改)
+- **变更**: 动态加载 `_partSynth` / `_partBioact` / `_partCheminf` 三个新模块
+- **图表总数**: 40 → 60+ (新增 18 个图表函数)
+
+### 文档更新
+- `README.md` — 更新管线描述 (Phase 7/8)、目录结构、Quick Start、Benchmark 表格
+- `CHANGE_LOG.md` — 本条目 (2026-04-05)
+
+---
+
 ## 2026-03-31 — Saponin Database Visualization & Validation (40-Chart Suite)
 
 ### 可视化全家桶开发 (Visualization Suite)

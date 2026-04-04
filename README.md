@@ -36,7 +36,15 @@
 对接 NPClassfier / LOTUS 数据库的超级门类（Superclass）及路径系统，完成化合物化学结构与植物门类关联归档。
 
 ### Phase 7: 数据聚合与出版级可视 (Aggregation & Visual Reporting)
-利用 `generate_saponin_charts.py` 生成近 40 张 Plotly 驱动的高保真统计图形，揭示宏观数据的统计学显著分布。
+利用 `generate_saponin_charts.py` 生成 **60+ 张** Plotly 驱动的高保真统计图形，覆盖六大分析维度：
+- **A/B/C/D 系列**: 核心糖链分析、交叉视图、皂苷专题 (40 charts)
+- **S 系列**: 糖链深度拓扑分析 — 二糖/三糖频率、分支点、连接位置雷达 (14 charts)
+- **E 系列**: 合成导向分析 — 连接感知砌块、苷元碳位热图、1,2-cis/trans 占比 (9 charts)
+- **F 系列**: 药学导向分析 — 活性×糖链长度、RO5 合规、QED 类药性 (5 charts)
+- **G/Q 系列**: 化学信息学深度 + 数据质量审计 (8 charts)
+
+### Phase 8: 糖链相似性匹配 (Glycan Similarity Engine)
+`lib/glycan_similarity.py` 实现了 Zhang-Shasha 树编辑距离 (TED) 算法，将糖链序列视为有根有序树，在三个打分维度（节点/边/拓扑）上计算加权编辑距离，支持全库 26K 序列的 Top-N 相似性检索（~3s/query）。附带交互式 Web 探索器 (`scripts/interactive_similarity.py`)。
 
 ---
 
@@ -44,25 +52,33 @@
 
 ```
 D:\Glycan_Database\
-├── lib/                               # 核心算法基座 (Core Engines)
-│   ├── pipeline_utils.py              # 数据合规流控 (格式封装与并行调度)
-│   ├── glycan_topology.py             # RDKit 切割、异头碳侦测与 CIP 计算
-│   ├── monosaccharide_identifier.py   # RWMol 虚拟修饰剥离、单糖 SMARTS 库匹配
-│   ├── molecular_visualizer.py        # 结构可视化 (高亮渲染)
-│   ├── glycan_reference_library.py    # 120+ 稀有糖模版 2D/3D 参数大盘
-│   └── taxonomy_***.py                # NCBI/LOTUS 物种指认工具
+├── lib/                                  # 核心算法基座 (Core Engines)
+│   ├── pipeline_utils.py                 # 数据合规流控 (格式封装与并行调度)
+│   ├── glycan_topology.py                # RDKit 切割、异头碳侦测与 CIP 计算
+│   ├── monosaccharide_identifier.py      # RWMol 虚拟修饰剥离、单糖 SMARTS 库匹配
+│   ├── glycan_similarity.py              # 🆕 Zhang-Shasha 树编辑距离引擎
+│   ├── molecular_visualizer.py           # 结构可视化 (高亮渲染)
+│   ├── glycan_reference_library.py       # 120+ 稀有糖模版 2D/3D 参数大盘
+│   └── taxonomy_***.py                   # NCBI/LOTUS 物种指认工具
 │
-├── scripts/                           # 执行流 (Executable Flow)
-│   ├── full_pipeline.py               # 🔥 全量并发计算的主入口脚本
-│   ├── extract_saponins.py            # 特异性功能：抽取皂苷及其报告输出
-│   ├── generate_saponin_charts.py     # 全域 Plotly / Kaleido 高清图谱生成器 
-│   ├── rescue_generic_sugars.py       # (净化版) 纯 NLP 泛指糖找回补丁
-│   └── cleanup.bat                    # 跨版本废弃分支物理清除器
+├── scripts/                              # 执行流 (Executable Flow)
+│   ├── full_pipeline.py                  # 🔥 全量并发计算的主入口脚本
+│   ├── extract_saponins.py               # 特异性功能：抽取皂苷及其报告输出
+│   ├── generate_saponin_charts.py        # 全域 60+ Plotly 高清图谱生成器
+│   ├── generate_saponin_charts_synth.py  # 🆕 E 系列: 合成导向分析 (E1-E5)
+│   ├── generate_saponin_charts_bioact.py # 🆕 F 系列: 药学导向分析 (F1-F5)
+│   ├── generate_saponin_charts_cheminf.py# 🆕 G+Q: 信息学 + 数据质量 (G1-G5, Q1-Q3)
+│   ├── interactive_similarity.py         # 🆕 TED 交互式 Web 探索器
+│   ├── rescue_generic_sugars.py          # (净化版) 纯 NLP 泛指糖找回补丁
+│   └── cleanup.bat                       # 跨版本废弃分支物理清除器
 │
-└── reports/                           # 数据输出池 (Pipeline Outputs)
-    ├── GlycoNP_Deep_Enriched_Final.csv# 最终整合净化版数据库
-    ├── GlycoNP_Saponin_DB.csv         # 皂苷提取验证表
-    └── saponin_figures/               # 40+ 矢量展示图存放仓
+├── tests/                                # 测试套件 (Test Suite)
+│   └── test_glycan_similarity.py         # 🆕 TED 模块 25 项 pytest (100% pass)
+│
+└── reports/                              # 数据输出池 (Pipeline Outputs)
+    ├── GlycoNP_Deep_Enriched_Final.csv   # 最终整合净化版数据库
+    ├── GlycoNP_Saponin_DB.csv            # 皂苷提取验证表
+    └── saponin_figures/                  # 60+ 矢量展示图 + TED 交互页
 ```
 
 ---
@@ -81,9 +97,15 @@ python scripts\full_pipeline.py --input reports\GlycoNP_Deep_Enriched_v12.csv --
 python scripts\extract_saponins.py
 ```
 
-**3. 输出全套科研报告与统计绘图库**
+**3. 输出全套科研报告与统计绘图库 (60+ charts)**
 ```powershell
 python scripts\generate_saponin_charts.py
+```
+
+**4.（可选）启动糖链相似性交互式探索器**
+```powershell
+python scripts\interactive_similarity.py
+# → 浏览器自动打开 http://localhost:8765，支持实时调整打分权重
 ```
 
 ---
@@ -94,5 +116,6 @@ python scripts\generate_saponin_charts.py
 |--------------------------|-------|------------------|----------------------|
 | 统一高压混合物 Benchmark   | 226 | **100% (226/226)** | 包含嵌套修饰与分支 |
 | 全天然产物大库 Saponin 子集| 25,958| 99.72% C1 CIP 精确指认 | Zero Scaffold Hallucination |
+| 糖链编辑距离模块 Pytest    | 25    | **100% (25/25)** | 解析器 + 打分矩阵 + TED 算法 + 批量检索 |
 
 > *此管线全面拒绝使用“苷元分类经验法则”强行赋予无手性 2D 糖分子伪全名的统计修补术。系统容忍 <0.3% 的原生 2D 残留 `Hex` 存在，以守护最终数据集作为训练机器学习预料库的底层可靠性。*

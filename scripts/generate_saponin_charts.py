@@ -860,18 +860,25 @@ def _loadModule(name, path):
 
 _p2path = Path(__file__).parent / "generate_saponin_charts_part2.py"
 _p3path = Path(__file__).parent / "generate_saponin_charts_part3.py"
+_pSynthPath = Path(__file__).parent / "generate_saponin_charts_synth.py"
+_pBioactPath = Path(__file__).parent / "generate_saponin_charts_bioact.py"
+_pCheminfPath = Path(__file__).parent / "generate_saponin_charts_cheminf.py"
 
 _part2 = _loadModule("saponin_part2", str(_p2path))
 _part3 = _loadModule("saponin_part3", str(_p3path))
+_partSynth = _loadModule("saponin_synth", str(_pSynthPath))
+_partBioact = _loadModule("saponin_bioact", str(_pBioactPath))
+_partCheminf = _loadModule("saponin_cheminf", str(_pCheminfPath))
 
 
 # =========================================================================
-# MAIN: Run ALL chart generators (A1-A17, B1-B3, C1, D1-D7, S1-S14)
+# MAIN: Run ALL chart generators
+# A1-A17, B1-B3, C1, D1-D7, S1-S14, E1-E5, F1-F5, G1-G5, Q1-Q3
 # =========================================================================
 
 def main():
     print("=" * 70)
-    print("  GlycoNP Saponin Database — Chart Generation (40 charts)")
+    print("  GlycoNP Saponin Database — Chart Generation (60+ charts)")
     print("=" * 70)
     df = loadAndTransform()
 
@@ -922,6 +929,28 @@ def main():
         _part3.chartS12SugarDiversityIndex,
         _part3.chartS13ChainLenVsDetailedClass,
         _part3.chartS14SugarFingerprintRadar,
+        # ── E 系列: 合成导向分析 (Synthesis-Oriented Analytics) ──
+        _partSynth.chartE1LinkageAwareSynthons,
+        _partSynth.chartE2AglyconePositionHeatmap,
+        _partSynth.chartE3InterGlycanLinkageMatrix,
+        _partSynth.chartE4BranchingDegree,
+        _partSynth.chartE5CisTransPrevalence,
+        # ── F 系列: 药学导向分析 (Bioactivity-Oriented Analytics) ──
+        _partBioact.chartF1ChainLengthBioactivity,
+        _partBioact.chartF2ModVsPchembl,
+        _partBioact.chartF3SugarVsTarget,
+        _partBioact.chartF4Ro5VsSugarCount,
+        _partBioact.chartF5QedBySaponinType,
+        # ── G 系列: 化学信息学深度 (Cheminformatics Deep Dive) ──
+        _partCheminf.chartG1MwVsSugarCount,
+        _partCheminf.chartG2Fsp3VsSugarCount,
+        _partCheminf.chartG3DeoxyVsOrganism,
+        _partCheminf.chartG4RareSugarVsFamily,
+        _partCheminf.chartG5ComplexityVsCitation,
+        # ── Q 系列: 数据质量审计 (Data Quality Audit) ──
+        _partCheminf.chartQ1StereoCoverage,
+        _partCheminf.chartQ2ProvenanceSankey,
+        _partCheminf.chartQ3ModAnnotationCompleteness,
     ]
 
     successCount = 0
